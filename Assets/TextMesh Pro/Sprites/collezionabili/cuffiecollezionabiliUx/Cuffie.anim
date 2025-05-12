@@ -6,9 +6,9 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cuffie
+  m_Name: cuffie
   serializedVersion: 7
-  m_Legacy: 0
+  m_Legacy: 1
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -17,9 +17,38 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -3337038689812066966, guid: 0743538c88a4c29479db73e192ff0e24, type: 3}
+    - time: 0.2
+      value: {fileID: -7383654581080768481, guid: 9326ef930bf82034cb80568e20d7b145, type: 3}
+    - time: 0.4
+      value: {fileID: -5788802291748688381, guid: 328631ae392995d41b4e4cc4dc1fab9d, type: 3}
+    - time: 0.6
+      value: {fileID: -7138501363732420223, guid: 9ca44ece192ad5448963e33d93be63ac, type: 3}
+    - time: 0.8
+      value: {fileID: 2039529474591191682, guid: 4f13bc7fc6f296748a442d49fbae06e6, type: 3}
+    - time: 1
+      value: {fileID: 7369610950392272073, guid: 5cf43000dc5be614284dedc032273e36, type: 3}
+    - time: 1.2166667
+      value: {fileID: 2039529474591191682, guid: 4f13bc7fc6f296748a442d49fbae06e6, type: 3}
+    - time: 1.4166666
+      value: {fileID: -7138501363732420223, guid: 9ca44ece192ad5448963e33d93be63ac, type: 3}
+    - time: 1.6
+      value: {fileID: -5788802291748688381, guid: 328631ae392995d41b4e4cc4dc1fab9d, type: 3}
+    - time: 1.8
+      value: {fileID: -7383654581080768481, guid: 9326ef930bf82034cb80568e20d7b145, type: 3}
+    - time: 1.9833333
+      value: {fileID: -3337038689812066966, guid: 0743538c88a4c29479db73e192ff0e24, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+    flags: 2
   m_SampleRate: 60
-  m_WrapMode: 0
+  m_WrapMode: 2
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
@@ -31,7 +60,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
