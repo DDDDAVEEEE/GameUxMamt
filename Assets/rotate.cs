@@ -12,32 +12,23 @@ public class rotate : MonoBehaviour
     {
         if (Input.GetKeyDown(sinistra))
         {
-            transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime * speed;
-        }
-        else if (Input.GetKey(sinistra))
-        {
-            speed += 1;
+            speed +=10;
             transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime * speed;
         }
 
         if (Input.GetKeyDown(destra))
         {
+            speed -=10;
             transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime * speed;
-        }
-        else if (Input.GetKey(destra))
-        {
-            speed -= 1;
-            transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime * speed;
-
         }
 
         if (!(Input.GetKey(sinistra) || Input.GetKey(destra)))
         {
-            if (speed < -1|| speed > 1)
+            if (speed < -0.1|| speed > 0.1)
             {
-                speed = speed - speed / attrito;
+                speed *= attrito;
             }
-            else if (speed < 1||speed > -1)
+            else if (speed < 0.1||speed > - 0.1)
             {
                 speed = 0;
             }
