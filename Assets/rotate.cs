@@ -19,7 +19,7 @@ public class rotate : MonoBehaviour
         if (Input.GetKeyDown(destra))
         {
             speed -=10;
-            transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime * speed;
+            transform.eulerAngles += new Vector3(0, 0, rotazione) * Time.deltaTime *speed;
         }
 
         if (!(Input.GetKey(sinistra) || Input.GetKey(destra)))

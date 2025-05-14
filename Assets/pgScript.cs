@@ -16,7 +16,7 @@ public class pgScript : MonoBehaviour
     public LogicScript logic;
     void Start()
     {
-       logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
+      // logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
         myRigidbody = GetComponent<Rigidbody2D>();
     }
 
