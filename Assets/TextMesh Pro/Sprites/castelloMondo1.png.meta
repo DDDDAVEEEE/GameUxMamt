@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      castelloMondo1_0: -5935708087648084124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
