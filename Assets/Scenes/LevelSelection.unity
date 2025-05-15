@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 10979256}
   - component: {fileID: 10979255}
   - component: {fileID: 10979254}
+  - component: {fileID: 10979257}
   m_Layer: 5
   m_Name: PlayLVL1
   m_TagString: Untagged
@@ -154,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.999985, y: -311.00003}
+  m_AnchoredPosition: {x: 77, y: -397}
   m_SizeDelta: {x: 143.32, y: 51.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10979254
@@ -176,7 +177,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -201,20 +202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
-        m_MethodName: OnTriggerEnter2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 582591533}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
         m_MethodName: GoToLvl1
         m_Mode: 1
         m_Arguments:
@@ -245,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3500759553075992606, guid: de0b9382ddf6a6043938fca7f941a8ef, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -263,6 +252,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10979252}
   m_CullTransparentMesh: 1
+--- !u!95 &10979257
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10979252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f3d9349234b56a4186aa67ed9729a34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &41824953
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +503,7 @@ GameObject:
   - component: {fileID: 470920823}
   - component: {fileID: 470920822}
   - component: {fileID: 470920821}
+  - component: {fileID: 470920824}
   m_Layer: 5
   m_Name: PlayLVL2
   m_TagString: Untagged
@@ -515,7 +527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: -311}
+  m_AnchoredPosition: {x: 77.000015, y: -397}
   m_SizeDelta: {x: 143.32, y: 51.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470920821
@@ -562,20 +574,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
-        m_MethodName: OnTriggerEnter2DLVL2
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 637262617}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
         m_MethodName: GoToLvl2
         m_Mode: 1
         m_Arguments:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3500759553075992606, guid: de0b9382ddf6a6043938fca7f941a8ef, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -624,6 +624,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470920819}
   m_CullTransparentMesh: 1
+--- !u!95 &470920824
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470920819}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f3d9349234b56a4186aa67ed9729a34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &582591531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1072,7 @@ GameObject:
   - component: {fileID: 863534044}
   - component: {fileID: 863534043}
   - component: {fileID: 863534046}
+  - component: {fileID: 863534047}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1181,6 +1204,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &863534047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863534042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38853d1fe4eeb3d429fab679fdd4a1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989785336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1228,7 @@ GameObject:
   - component: {fileID: 989785340}
   - component: {fileID: 989785339}
   - component: {fileID: 989785338}
+  - component: {fileID: 989785341}
   m_Layer: 5
   m_Name: PlayLVL3
   m_TagString: Untagged
@@ -1216,7 +1252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85.00007, y: -311}
+  m_AnchoredPosition: {x: 76.999954, y: -397}
   m_SizeDelta: {x: 143.32, y: 51.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989785338
@@ -1263,20 +1299,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
-        m_MethodName: OnTriggerEnter2DLVL3
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 41824955}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
         m_MethodName: GoToLvl3
         m_Mode: 1
         m_Arguments:
@@ -1307,7 +1331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3500759553075992606, guid: de0b9382ddf6a6043938fca7f941a8ef, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1325,6 +1349,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989785336}
   m_CullTransparentMesh: 1
+--- !u!95 &989785341
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989785336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f3d9349234b56a4186aa67ed9729a34, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1277836009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1691,7 @@ GameObject:
   - component: {fileID: 1849463390}
   - component: {fileID: 1849463389}
   - component: {fileID: 1849463388}
+  - component: {fileID: 1849463391}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1668,8 +1715,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -543, y: -311}
-  m_SizeDelta: {x: 143.32, y: 51.83}
+  m_AnchoredPosition: {x: -586, y: -421.64}
+  m_SizeDelta: {x: 120.25, y: 101.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849463388
 MonoBehaviour:
@@ -1690,7 +1737,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1715,21 +1762,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
-        m_MethodName: OnTriggerEnter2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 582591533}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: selezioneLVLScript, Assembly-CSharp
-        m_MethodName: GoToLvl1
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
+        m_MethodName: GoToCharterSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1759,7 +1794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1789410163395191652, guid: 8547f15eb3880214a954d1880d828efa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b193d685b8310de4e81f6ba0674dce87, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1777,6 +1812,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849463386}
   m_CullTransparentMesh: 1
+--- !u!95 &1849463391
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849463386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1529b0d0d4baafd4e87cd688fb0a87ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

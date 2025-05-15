@@ -46,54 +46,64 @@ public class pgSelectionLVLsript : MonoBehaviour
        Debug.Log("Collisione con: " + collision.gameObject.name);
         if (collision.gameObject.tag == "cast1")
         {
-          //  Debug.Log("Collisione con: " + collision.gameObject.name);
-
+            //  Debug.Log("Collisione con: " + collision.gameObject.name);
+            
             PlayLVL1.SetActive(true);
+            PlayLVL2.SetActive(false);
+            PlayLVL3.SetActive(false);
+            Debug.Log("Bottone 1 attivato!");
            // Debug.Log("Bottone attivato!");
         }
         
     }
 
-    private void OnTriggerExit2DLVL1(Collider2D collider)
+   /* private void OnTriggerExit2DLVL1(Collider2D collider)
     {
-        if (collider.CompareTag("cast1")) // Quando il player esce, nasconde il bottone
+        if (collider.gameObject.tag == "cast1") // Quando il player esce, nasconde il bottone
         {
             PlayLVL1.SetActive(false);
+            Debug.Log("Bottone 1 disattivo!");
         }
-    }
-     public void OnTriggerEnter2DLVL2(Collider2D collision2)
+    }*/
+     public void OnTriggerEnter2DLVL2(Collider2D collision)
     {
-        Debug.Log("Collisione con: " + collision2.gameObject.name);
-        if (collision2.CompareTag("cast2"))
+        Debug.Log("Collisione con: " + collision.gameObject.name);
+        if (collision.gameObject.tag == "cast2")
         {
+            PlayLVL1.SetActive(false);
             PlayLVL2.SetActive(true);
-            Debug.Log("Bottone attivato!");
+            PlayLVL3.SetActive(false);
+            Debug.Log("Bottone2 attivato!");
         }
         
     }
-    private void OnTriggerExit2DLVL2(Collider2D collider2)
+   /* private void OnTriggerExit2DLVL2(Collider2D collider2)
     {
-        if (collider2.CompareTag("cast2")) // Quando il player esce, nasconde il bottone
+        if (collider2.gameObject.tag == "cast2") // Quando il player esce, nasconde il bottone
         {
             PlayLVL2.SetActive(false);
+            Debug.Log("Bottone 2 disattivo!");
         }
-    }
+    }*/
 
-    public void OnTriggerEnter2DLVL3(Collider2D collision3)
+    public void OnTriggerEnter2DLVL3(Collider2D collision)
     {    
-        if (collision3.CompareTag("cast3"))
+        if (collision.gameObject.tag == "cast3")
         {
+            PlayLVL1.SetActive(false);
+            PlayLVL2.SetActive(false);
             PlayLVL3.SetActive(true);
-            
+            Debug.Log("Bottone 3 attivato!");
         }    
     }
-    private void OnTriggerExit2DLVL3(Collider2D collider3)
+    /*private void OnTriggerExit2DLVL3(Collider2D collider3)
     {
-        if (collider3.CompareTag("cast3")) // Quando il player esce, nasconde il bottone
+        if (collider3.gameObject.tag == "cast3") // Quando il player esce, nasconde il bottone
         {
             PlayLVL3.SetActive(false);
+            Debug.Log("Bottone 3 disattivo!");  
         }
-    }
+    }*/
     public void GoToLvl1()
     {
         SceneManager.LoadSceneAsync(5);//Option Game
