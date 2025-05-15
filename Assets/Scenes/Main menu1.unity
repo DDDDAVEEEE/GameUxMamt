@@ -296,8 +296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -472, y: -270}
-  m_SizeDelta: {x: 315, y: 105}
+  m_AnchoredPosition: {x: -472, y: -306.63098}
+  m_SizeDelta: {x: 250, y: 194.9796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81997508
 MonoBehaviour:
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1789410163395191652, guid: 8547f15eb3880214a954d1880d828efa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b193d685b8310de4e81f6ba0674dce87, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -403,7 +403,7 @@ Animator:
   m_GameObject: {fileID: 81997506}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f73609cc2ceb8f4ca2ce849dbed680e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1529b0d0d4baafd4e87cd688fb0a87ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1448,8 +1448,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 511, y: -270}
-  m_SizeDelta: {x: 315, y: 105}
+  m_AnchoredPosition: {x: 484, y: -292.68}
+  m_SizeDelta: {x: 247.6401, y: 87.6382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1878061489
 MonoBehaviour:
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3500759553075992606, guid: de0b9382ddf6a6043938fca7f941a8ef, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1555,7 +1555,7 @@ Animator:
   m_GameObject: {fileID: 1878061487}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f73609cc2ceb8f4ca2ce849dbed680e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f3d9349234b56a4186aa67ed9729a34, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
