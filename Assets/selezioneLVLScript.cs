@@ -10,10 +10,14 @@ public class selezioneLVLScript : MonoBehaviour
     
     public Button esci;
     public Button start;
-    public 
+    public KeyCode up;
+    public KeyCode down;
+
+    public static selezioneLVLScript instance;
     void Start()
     {
-        esci = GetComponent<Button>();   
+        instance = this;
+        esci = GetComponent<Button>();
     }
 
     public void cambioSelezione (string nuovo){
@@ -22,11 +26,11 @@ public class selezioneLVLScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(down))
         {
             start.onClick.Invoke();
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(up))
         {
             esci.onClick.Invoke();
         }

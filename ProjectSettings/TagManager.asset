@@ -9,6 +9,10 @@ TagManager:
   - cast1
   - cast3
   - idk
+  - exit
+  - lvl1
+  - lvl2
+  - lvl3
   layers:
   - Default
   - TransparentFX
