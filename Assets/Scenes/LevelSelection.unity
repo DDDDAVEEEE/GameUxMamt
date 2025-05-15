@@ -1546,7 +1546,7 @@ MonoBehaviour:
   - {x: -3.34, y: -0.93}
   - {x: 1.11, y: -0.94}
   - {x: 5.91, y: -0.94}
-  selezioneLVLScript: {fileID: 0}
+  selezioneLVLScript: {fileID: 1277836009}
   PlayLVL1: {fileID: 10979252}
   PlayLVL2: {fileID: 470920819}
   PlayLVL3: {fileID: 989785336}
