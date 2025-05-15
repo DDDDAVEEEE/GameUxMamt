@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98.99994, y: -384}
-  m_SizeDelta: {x: 142.1, y: 114.23}
+  m_AnchoredPosition: {x: -6, y: -378}
+  m_SizeDelta: {x: 195.28, y: 75.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10979254
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -262,7 +262,7 @@ Animator:
   m_GameObject: {fileID: 10979252}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61cb486596d96b14fb252d2085ed793a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6452ddd07a322554fb18fe56d38ca8bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -527,8 +527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99, y: -384}
-  m_SizeDelta: {x: 142.1, y: 114.23}
+  m_AnchoredPosition: {x: -6, y: -377.99997}
+  m_SizeDelta: {x: 195.28, y: 75.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470920821
 MonoBehaviour:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -634,7 +634,7 @@ Animator:
   m_GameObject: {fileID: 470920819}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61cb486596d96b14fb252d2085ed793a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6452ddd07a322554fb18fe56d38ca8bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1252,8 +1252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98.99994, y: -384}
-  m_SizeDelta: {x: 142.1, y: 114.23}
+  m_AnchoredPosition: {x: -6, y: -377.99997}
+  m_SizeDelta: {x: 195.28, y: 75.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &989785338
 MonoBehaviour:
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1359,7 +1359,7 @@ Animator:
   m_GameObject: {fileID: 989785336}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61cb486596d96b14fb252d2085ed793a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6452ddd07a322554fb18fe56d38ca8bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1530,7 +1530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.35, y: -1.27}
+  m_AnchoredPosition: {x: 5.61, y: -1.19}
   m_SizeDelta: {x: 0.6928, y: 0.5246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667084347
@@ -1546,9 +1546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positions:
-  - {x: -3.34, y: -0.93}
-  - {x: 1.11, y: -0.94}
-  - {x: 5.91, y: -0.94}
+  - {x: -6.35, y: -0.93}
+  - {x: -0.27, y: -0.94}
+  - {x: 5.61, y: -0.94}
   PlayLVL1: {fileID: 10979252}
   PlayLVL2: {fileID: 470920819}
   PlayLVL3: {fileID: 989785336}
@@ -1732,8 +1732,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 837, y: 422}
-  m_SizeDelta: {x: 120.25, y: 101.12}
+  m_AnchoredPosition: {x: 772.53, y: 375.27}
+  m_SizeDelta: {x: 184.72, y: 147.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849463388
 MonoBehaviour:
