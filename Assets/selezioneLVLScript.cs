@@ -17,7 +17,7 @@ public class selezioneLVLScript : MonoBehaviour
     void Start()
     {
         instance = this;
-        esci = GetComponent<Button>();
+        esci = GameObject.FindGameObjectWithTag("exit").GetComponent<Button>();
     }
 
     public void cambioSelezione (string nuovo){

@@ -69,16 +69,5 @@ public class pgSelectionLVLsript : MonoBehaviour
             selezioneLVLScript.instance.cambioSelezione("lvl3");
         } 
     }
-    public void GoToLvl1()
-    {
-        SceneManager.LoadSceneAsync(5);//Option Game
-    }
-    public void GoToLvl2()
-    {
-        SceneManager.LoadSceneAsync(6);
-    }
-        public void GoToLvl3()
-    {
-        SceneManager.LoadSceneAsync(7);
-    }
+    
 }
