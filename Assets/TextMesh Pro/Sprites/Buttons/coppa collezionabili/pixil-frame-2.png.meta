@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: c5bc3772d9ece144a96b02e301bdc7b2
+guid: e0eb8495574599549b460189e35f1bd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5935708087648084124
-    second: castelloMondo1_0
+      213: -5788802291748688381
+    second: pixil-frame-2_0
+  - first:
+      213: -4197011268740174603
+    second: pixil-frame-2_1
+  - first:
+      213: 5238574752703403101
+    second: pixil-frame-2_2
+  - first:
+      213: -5228808262785887117
+    second: pixil-frame-2_3
+  - first:
+      213: 2506841071602717972
+    second: pixil-frame-2_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: castelloMondo1_0
+      name: pixil-frame-2_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 68
-        width: 127
-        height: 132
+        x: 161
+        y: 287
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +140,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46f925961f020ada0800000000000000
-      internalID: -5935708087648084124
+      spriteID: 30e2a5d6cfa0aafa0800000000000000
+      internalID: -5788802291748688381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-2_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 287
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc2e60ec7831c5c0800000000000000
+      internalID: -4197011268740174603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-2_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 263
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5457308bf723b840800000000000000
+      internalID: 5238574752703403101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-2_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 263
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3741502a69a8f67b0800000000000000
+      internalID: -5228808262785887117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixil-frame-2_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 101
+        width: 158
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4155d3d3ca61ac220800000000000000
+      internalID: 2506841071602717972
       vertices: []
       indices: 
       edges: []
@@ -138,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      castelloMondo1_0: -5935708087648084124
+      pixil-frame-2_0: -5788802291748688381
+      pixil-frame-2_1: -4197011268740174603
+      pixil-frame-2_2: 5238574752703403101
+      pixil-frame-2_3: -5228808262785887117
+      pixil-frame-2_4: 2506841071602717972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -202,8 +202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: MainLVLScript, Assembly-CSharp
         m_MethodName: GoToLvl1
         m_Mode: 1
         m_Arguments:
@@ -301,14 +301,14 @@ RectTransform:
   m_GameObject: {fileID: 41824953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 3, y: 3, z: 0.76979}
+  m_LocalScale: {x: 0.17380455, y: 0.18335426, z: 0.03920674}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863534045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.58, y: -0.95}
+  m_AnchoredPosition: {x: 6.29, y: 0.36}
   m_SizeDelta: {x: 0.8113, y: 0.0331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &41824955
@@ -345,17 +345,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.02138853, y: -0.012387872}
+  m_Offset: {x: 0.12536073, y: -10.655975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.27, y: 1.32}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 35.839996, y: 35.839996}
+    newSize: {x: 35.839996, y: 35.839996}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1700184, y: 1.2890348}
+  m_Size: {x: 10.9429, y: 13.509449}
   m_EdgeRadius: 0
 --- !u!212 &41824956
 SpriteRenderer:
@@ -401,12 +401,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5935708087648084124, guid: c5bc3772d9ece144a96b02e301bdc7b2, type: 3}
-  m_Color: {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8664cb254df5e9f4b85bd8efad70b0f1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 35.839996, y: 35.839996}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -574,8 +574,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: MainLVLScript, Assembly-CSharp
         m_MethodName: GoToLvl2
         m_Mode: 1
         m_Arguments:
@@ -764,14 +764,14 @@ RectTransform:
   m_GameObject: {fileID: 582591531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 3, y: 3, z: 0.76979}
+  m_LocalScale: {x: 0.16191432, y: 0.22348467, z: 0.76979}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863534045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.29, y: -0.93}
+  m_AnchoredPosition: {x: -6.09, y: -1.71}
   m_SizeDelta: {x: 0.8113, y: 0.0331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &582591533
@@ -808,17 +808,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0037373304, y: -0.057495654}
+  m_Offset: {x: 0.4342339, y: -0.21344185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.27, y: 1.32}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 23.26, y: 9.82}
+    newSize: {x: 23.26, y: 9.82}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0514326, y: 1.1988193}
+  m_Size: {x: 12.244246, y: 9.411955}
   m_EdgeRadius: 0
 --- !u!212 &582591534
 SpriteRenderer:
@@ -864,12 +864,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5935708087648084124, guid: c5bc3772d9ece144a96b02e301bdc7b2, type: 3}
-  m_Color: {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
+  m_Sprite: {fileID: -5265348371282806778, guid: 666e3d1747126284ea5eb325913fff1e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 23.26, y: 9.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -902,7 +902,7 @@ RectTransform:
   m_GameObject: {fileID: 637262615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 3, y: 3, z: 0.76979}
+  m_LocalScale: {x: 0.19595464, y: 0.19595464, z: 0.0502813}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863534045}
@@ -946,17 +946,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0053732395, y: -0.03345418}
+  m_Offset: {x: -0.4754212, y: -4.263892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.27, y: 1.32}
+    oldSize: {x: 24.1, y: 19.060001}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0316603, y: 1.2469022}
+  m_Size: {x: 9.9103565, y: 9.707775}
   m_EdgeRadius: 0
 --- !u!212 &637262618
 SpriteRenderer:
@@ -1002,8 +1002,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -5935708087648084124, guid: c5bc3772d9ece144a96b02e301bdc7b2, type: 3}
-  m_Color: {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
+  m_Sprite: {fileID: 7991216970674330638, guid: c2bdce3a0888db040943051b87bf23d6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1139,6 +1139,7 @@ GameObject:
   - component: {fileID: 863534044}
   - component: {fileID: 863534043}
   - component: {fileID: 863534046}
+  - component: {fileID: 863534047}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1273,6 +1274,18 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &863534047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863534042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a136929a9ee8ca1488f208515256a677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &989785336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,8 +1369,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: MainLVLScript, Assembly-CSharp
         m_MethodName: GoToLvl3
         m_Mode: 1
         m_Arguments:
@@ -1718,14 +1731,14 @@ RectTransform:
   m_GameObject: {fileID: 1667084345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 11}
-  m_LocalScale: {x: 5, y: 5.0625, z: 0.76979}
+  m_LocalScale: {x: 5, y: 5.3156247, z: 0.76979}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 863534045}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.16, y: -1.4452}
+  m_AnchoredPosition: {x: -6.16, y: -1.426}
   m_SizeDelta: {x: 0.6928, y: 0.5246}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667084347
@@ -1972,7 +1985,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2952330996136284858, guid: 661a9aba2be77d04c82a8ab08a08fa5f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2065,9 +2078,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LvlSelectionScript, Assembly-CSharp
-        m_MethodName: GoToCharterSelection
+      - m_Target: {fileID: 863534047}
+        m_TargetAssemblyTypeName: MainLVLScript, Assembly-CSharp
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
