@@ -1,6 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Lvl1mainScript : MonoBehaviour
 {
@@ -10,8 +12,10 @@ public class Lvl1mainScript : MonoBehaviour
         Debug.Log("idk entra funzione con" + collider.gameObject.tag);
         if (collider.gameObject.tag == "GameOver")
         {
+            //int lvl = 5;
+            StaticScript.livello = 5;
             SceneManager.LoadSceneAsync(8);
-        }
+        } 
     }
     void Update()
     { 
