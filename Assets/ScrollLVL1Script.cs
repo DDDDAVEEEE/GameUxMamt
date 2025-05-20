@@ -3,19 +3,19 @@ using UnityEngine;
 public class BackGoundScrollScrript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public BoxCollider2D collider;
-    public Rigidbody2D rb;
+    public BoxCollider2D colliderSfondo;
+    public Rigidbody2D rbSfondo;
     private float width;
     private float scrollSpeed=-1f;
     void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
-        rb = GetComponent<Rigidbody2D>();
+        colliderSfondo = GetComponent<BoxCollider2D>();
+        rbSfondo = GetComponent<Rigidbody2D>();
 
-        width = collider.size.x;
-        collider.enabled = false;
+        width = colliderSfondo.size.x;
+        colliderSfondo.enabled = false;
 
-        rb.linearVelocity = new Vector2(scrollSpeed,0);
+        rbSfondo.linearVelocity = new Vector2(scrollSpeed,0);
     }
 
     // Update is called once per frame
