@@ -22,9 +22,14 @@ public class pgScript : MonoBehaviour
     private Transform groundCheck;
     public Rigidbody2D rb;
     public BoxCollider2D bc;
+    public BoxCollider2D hitboxA;
+    public BoxCollider2D hitboxS;
+
     //--------------------------------------------------------------------------------------------
     private bool isJumping = false;
     private bool canSlide = true;
+    private bool canAttacco = true;
+    private bool canShild = true;
     private bool pgIsAlive = true;
     private bool imm=false;
     //--------------------------------------------------------------------------------------------
@@ -42,6 +47,8 @@ public class pgScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        hitboxA.gameObject.SetActive(false);
+        hitboxS.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,7 +72,24 @@ public class pgScript : MonoBehaviour
                     StartCoroutine(Slide());
                 }
             }
-
+            //-------------------------------------------------------------------------------------------------------------------   
+            if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la scivolata premendo Shift
+            {
+                Debug.Log("Attacco avviato!");
+                if (canAttacco)
+                {
+                    StartCoroutine(Attacco());
+                }
+            }
+            //-------------------------------------------------------------------------------------------------------------------   
+            if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la scivolata premendo Shift
+            {
+                Debug.Log("Scudo avviato!");
+                if (canShild)
+                {
+                    StartCoroutine(Shild());
+                }
+            }
         }
         //-------------------------------------------------------------------------------------------------------------------
         transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);//movimento player
@@ -76,11 +100,30 @@ public class pgScript : MonoBehaviour
         //-------------------------------------------------------------------------------------------------------------------
 
     }
-   /* void FixedUpdate()
-    { 
-        rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
-    }*/
-
+    /* void FixedUpdate()
+     { 
+         rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
+     }*/
+     IEnumerator Shild()
+    {
+        Debug.Log("funziona!");
+        canShild = false;
+        hitboxS.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+        hitboxS.gameObject.SetActive(false);
+        canShild = true;
+    }
+    //------------------------------------------------------------------------------------------------------------------------
+    
+    IEnumerator Attacco()
+    {
+        Debug.Log("funziona!");
+        canAttacco = false;
+        hitboxA.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+        hitboxA.gameObject.SetActive(false);
+        canAttacco = true;
+    }
     IEnumerator Slide()
     {
         // Disabilita l'abilità temporaneamente
@@ -110,10 +153,11 @@ public class pgScript : MonoBehaviour
         if (collision.gameObject.tag == "ground")
         {
             isJumping = false;
-        }
-        if (collision.gameObject.tag == "dannoGr" && !imm)
+        }   
+        if (collision.gameObject.tag == "DannoGr" && !imm)
         {
-            Damage();
+             Debug.Log("prende danno!");
+            StartCoroutine(Damage());
         }
     }
     public void OnTriggerEnter2D(Collider2D collider)
@@ -121,27 +165,30 @@ public class pgScript : MonoBehaviour
         Debug.Log("idk entra funzione con" + collider.gameObject.tag);
         if (collider.gameObject.tag == "GameOver")
         {
+
             GameOver();
         }
     }
     IEnumerator Damage()
     {
-        Immortalita();
+        //Immortalita();
+        Debug.Log("decrementa hp!");
         hp--;
         switch (hp)
         {
             case 0:
-                life1.GetComponent<Animator>().Play("danno");
+                life1.GetComponent<Animator>().Play("life1");
                 yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                 GameOver();
                 break;
             case 1:
-                life2.GetComponent<Animator>().Play("danno");
+                life2.GetComponent<Animator>().Play("VitaVuota");
                 yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                 Destroy(life2);
                 break;
             case 2:
-                life3.GetComponent<Animator>().Play("danno");
+                Debug.Log("leva la terza vita!");
+                life3.GetComponent<Animator>().Play("life1");
                 yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                 Destroy(life3);
                 break;
@@ -150,6 +197,7 @@ public class pgScript : MonoBehaviour
     }
     public void GameOver()
     {
+        hp = 3;
         StaticScript.livello = 5;
         SceneManager.LoadSceneAsync(8);//game over
     }
