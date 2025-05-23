@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nuvole no sfondo_0: -2952330996136284858
+      nuvole no sfondo_1: -1996179539923391084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

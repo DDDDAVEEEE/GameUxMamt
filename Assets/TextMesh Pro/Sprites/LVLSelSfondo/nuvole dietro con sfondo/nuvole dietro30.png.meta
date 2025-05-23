@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nuvole dietro30_0: -6947057460408434401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

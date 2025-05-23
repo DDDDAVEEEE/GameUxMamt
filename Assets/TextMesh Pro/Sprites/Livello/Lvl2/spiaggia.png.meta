@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spiaggia_0: -3773259793009580911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

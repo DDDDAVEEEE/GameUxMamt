@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NuvolozzaTitolo_0: -1347555628155624133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

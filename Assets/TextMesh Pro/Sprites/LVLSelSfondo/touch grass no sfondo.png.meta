@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      touch grass no sfondo_0: 1588331686707793084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
