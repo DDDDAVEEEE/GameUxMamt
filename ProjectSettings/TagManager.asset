@@ -17,6 +17,7 @@ TagManager:
   - ground
   - DannoGr
   - Attacco
+  - CestinoDopo
   layers:
   - Default
   - TransparentFX

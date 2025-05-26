@@ -29,6 +29,7 @@ public class pgScript : MonoBehaviour
     private bool isJumping = false;
     private bool canSlide = true;
     private bool canAttacco = true;
+    public bool sync = true;
     private bool canShild = true;
     private bool pgIsAlive = true;
     private bool imm=false;
@@ -41,6 +42,7 @@ public class pgScript : MonoBehaviour
     public GameObject life1;
     public GameObject life2;
     public GameObject life3;
+    public Animator Cestino;
     public int hp = 3;
     //--------------------------------------------------------------------------------------------
     void Start()
@@ -64,31 +66,30 @@ public class pgScript : MonoBehaviour
                 isJumping = true;
             }
             //-------------------------------------------------------------------------------------------------------------------
-            if (Input.GetKeyDown(KeyCode.S) && canSlide) // Attiva la scivolata premendo Shift
+            if (Input.GetKeyDown(KeyCode.S) && canSlide && !isJumping) // Attiva la scivolata premendo Shift
             {
                 Debug.Log("Scivolata avviata!");
-                if (canSlide)
-                {
+               
                     StartCoroutine(Slide());
-                }
+                
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la scivolata premendo Shift
+            if (Input.GetKeyDown(KeyCode.A) && canAttacco && sync) // Attiva la 
             {
                 Debug.Log("Attacco avviato!");
-                if (canAttacco)
-                {
+
+                    sync = false;
                     StartCoroutine(Attacco());
-                }
+                    sync = true;
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la scivolata premendo Shift
+            if (Input.GetKeyDown(KeyCode.D) && canShild &&   sync) // Attiva la 
             {
                 Debug.Log("Scudo avviato!");
-                if (canShild)
-                {
+                sync = false;
                     StartCoroutine(Shild());
-                }
+                sync = true;
+                
             }
         }
         //-------------------------------------------------------------------------------------------------------------------
@@ -117,7 +118,7 @@ public class pgScript : MonoBehaviour
     
     IEnumerator Attacco()
     {
-        Debug.Log("funziona!");
+        Debug.Log("funziona attacco!");
         canAttacco = false;
         hitboxA.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
@@ -167,6 +168,18 @@ public class pgScript : MonoBehaviour
         {
 
             GameOver();
+        }
+        if (collider.gameObject.tag == "DannoGr" && !imm)
+        {
+            Debug.Log("prende danno!");
+            StartCoroutine(Damage());
+        }
+        if (collider.gameObject.tag == "CestinoDopo")
+        {
+           // Debug.Log("CambioAnimazione");
+          // Cestino.SetTrigger("CestinoDopo");
+
+            
         }
     }
     IEnumerator Damage()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c4b72a4bd3480749bf0d233464b42c7
+guid: cb21956b4ae974541998b6e139ff80f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 322756723989836455
-    second: parte1livello2_0
+      213: 5176979939216999569
+    second: pavimento giusto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parte1livello2_0
+      name: pavimento giusto_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1920
-        height: 1080
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a2784ac789aa7400800000000000000
-      internalID: 322756723989836455
+      spriteID: 1944a5e63d358d740800000000000000
+      internalID: 5176979939216999569
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      parte1livello2_0: 322756723989836455
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
