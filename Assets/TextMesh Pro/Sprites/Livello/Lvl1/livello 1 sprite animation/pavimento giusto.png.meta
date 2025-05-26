@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pavimento giusto_0: 5176979939216999569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
