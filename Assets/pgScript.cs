@@ -76,7 +76,7 @@ public class pgScript : MonoBehaviour
 
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la 
+            if (Input.GetKeyDown(KeyCode.A) && canAttacco ) // Attiva la 
             {
                 Debug.Log("Attacco avviato!");
                 //canShild = false;
@@ -114,21 +114,25 @@ public class pgScript : MonoBehaviour
     {
         Debug.Log("funziona!");
         canShild = false;
+        canAttacco = false;
         hitboxS.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
         hitboxS.gameObject.SetActive(false);
+        canAttacco = true;
         canShild = true;
     }
     //------------------------------------------------------------------------------------------------------------------------
-    
+
     IEnumerator Attacco()
     {
         Debug.Log("funziona attacco!");
         canAttacco = false;
+        canShild = false;
         hitboxA.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
         hitboxA.gameObject.SetActive(false);
         canAttacco = true;
+        canShild = true;
     }
     IEnumerator Slide()
     {

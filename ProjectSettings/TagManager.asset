@@ -19,6 +19,7 @@ TagManager:
   - Attacco
   - CestinoDopo
   - col
+  - Shild
   layers:
   - Default
   - TransparentFX
