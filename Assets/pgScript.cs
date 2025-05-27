@@ -178,7 +178,7 @@ public class pgScript : MonoBehaviour
 
             GameOver();
         }
-        if (collider.gameObject.tag == "DannoGr" && !imm)
+        if ((collider.gameObject.tag == "DannoGr"||collider.gameObject.tag == "Proie") && !imm)
         {
             Debug.Log("prende danno!");
             StartCoroutine(Damage());
