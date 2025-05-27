@@ -24,12 +24,12 @@ public class pgScript : MonoBehaviour
     public BoxCollider2D bc;
     public BoxCollider2D hitboxA;
     public BoxCollider2D hitboxS;
+    public BoxCollider2D Cuffie;
 
     //--------------------------------------------------------------------------------------------
     private bool isJumping = false;
     private bool canSlide = true;
     private bool canAttacco = true;
-    public bool sync = true;
     private bool canShild = true;
     private bool pgIsAlive = true;
     private bool imm=false;
@@ -51,11 +51,13 @@ public class pgScript : MonoBehaviour
         bc = GetComponent<BoxCollider2D>();
         hitboxA.gameObject.SetActive(false);
         hitboxS.gameObject.SetActive(false);
+        Cuffie.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         //-------------------------------------------------------------------------------------------------------------------
         //horizontal = Input.GetAxisRaw("Horizontal");
         if (pgIsAlive == true)
@@ -69,27 +71,30 @@ public class pgScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S) && canSlide && !isJumping) // Attiva la scivolata premendo Shift
             {
                 Debug.Log("Scivolata avviata!");
-               
-                    StartCoroutine(Slide());
-                
+
+                StartCoroutine(Slide());
+
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.A) && canAttacco && sync) // Attiva la 
+            if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la 
             {
                 Debug.Log("Attacco avviato!");
-
-                    sync = false;
-                    StartCoroutine(Attacco());
-                    sync = true;
+                //canShild = false;
+                //canAttacco = true;
+                StartCoroutine(Attacco());
+                //canAttacco = false;
+                //canShild = true;        
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.D) && canShild &&   sync) // Attiva la 
+            if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la 
             {
                 Debug.Log("Scudo avviato!");
-                sync = false;
-                    StartCoroutine(Shild());
-                sync = true;
-                
+                //canAttacco = false;
+                //canShild = true;
+                StartCoroutine(Shild());
+                //canAttacco = true;
+                //canShild = false;
+
             }
         }
         //-------------------------------------------------------------------------------------------------------------------
@@ -176,37 +181,46 @@ public class pgScript : MonoBehaviour
         }
         if (collider.gameObject.tag == "CestinoDopo")
         {
-           // Debug.Log("CambioAnimazione");
-          // Cestino.SetTrigger("CestinoDopo");
-
-            
+            // Debug.Log("CambioAnimazione");
+            // Cestino.SetTrigger("CestinoDopo");  
+        }
+        if (collider.gameObject.tag == "col")
+        {
+            Debug.Log("DDistruzione");
+            Cuffie.gameObject.SetActive(false);
+            //StaticScript. = 5;
         }
     }
     IEnumerator Damage()
     {
-        //Immortalita();
+        
         Debug.Log("decrementa hp!");
-        hp--;
-        switch (hp)
-        {
-            case 0:
-                life1.GetComponent<Animator>().Play("life1");
-                yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
-                GameOver();
-                break;
-            case 1:
-                life2.GetComponent<Animator>().Play("VitaVuota");
-                yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
-                Destroy(life2);
-                break;
-            case 2:
-                Debug.Log("leva la terza vita!");
-                life3.GetComponent<Animator>().Play("life1");
-                yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
-                Destroy(life3);
-                break;
+        if (!imm) { 
+            
+            hp--;
+            switch (hp)
+            {
+                case 0:
+                StartCoroutine(Immortalita());
+                    life1.GetComponent<Animator>().Play("life1");
+                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    GameOver();
+                    break;
+                case 1:
+                StartCoroutine(Immortalita());
+                    life2.GetComponent<Animator>().Play("VitaVuota");
+                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    Destroy(life2);
+                    break;
+                case 2:
+                StartCoroutine(Immortalita());
+                    Debug.Log("leva la terza vita!");
+                    life3.GetComponent<Animator>().Play("life1");
+                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                   Destroy(life3);
+                    break;
+            }
         }
-
     }
     public void GameOver()
     {
@@ -217,8 +231,10 @@ public class pgScript : MonoBehaviour
     IEnumerator Immortalita()
     {
         imm = true;
-        GetComponent<Animator>().Play("imm");//animazione immortalita
-        yield return new WaitForSeconds(1f); // tempo di immortalita
+        //GetComponent<Animator>().Play("imm");//animazione immortalita
+        yield return new WaitForSeconds(2f); // tempo di immortalita    
+
+        imm = false;
         //GetComponent<Animator>().("normal");//animazione immortalita
     }
 }
