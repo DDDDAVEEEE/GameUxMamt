@@ -13,7 +13,7 @@ public class pgScript : MonoBehaviour
     public float jump = 16f;
     private float horizontal;
     public float slideSpeed = 5f; // Velocità dello scivolamento
-    public float slideDuration = 0.5f; // Durata dello scivolamento
+    public float slideDuration = 2f; // Durata dello scivolamento
     public int cooldownTime = 2; // Tempo di ricarica
     private float movimento = 1f; //movimento x
     public float depthFactor = 3;
@@ -31,7 +31,7 @@ public class pgScript : MonoBehaviour
     private bool canSlide = true;
     private bool canAttacco = true;
     private bool canShild = true;
-    private bool pgIsAlive = true;
+    private bool pgIsAlive = false;
     private bool imm=false;
     //--------------------------------------------------------------------------------------------
     public KeyCode salta;
@@ -42,6 +42,11 @@ public class pgScript : MonoBehaviour
     public GameObject life1;
     public GameObject life2;
     public GameObject life3;
+    public GameObject  tre;
+    public GameObject due;
+    public GameObject uno;
+    public GameObject go;
+   
     public Animator Cestino;
     public int hp = 3;
     //--------------------------------------------------------------------------------------------
@@ -52,14 +57,18 @@ public class pgScript : MonoBehaviour
         hitboxA.gameObject.SetActive(false);
         hitboxS.gameObject.SetActive(false);
         Cuffie.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         //-------------------------------------------------------------------------------------------------------------------
         //horizontal = Input.GetAxisRaw("Horizontal");
+        
+
+
         if (pgIsAlive == true)
         {
             if (Input.GetKeyDown(KeyCode.W) && !isJumping)//jump
@@ -76,7 +85,7 @@ public class pgScript : MonoBehaviour
 
             }
             //-------------------------------------------------------------------------------------------------------------------   
-            if (Input.GetKeyDown(KeyCode.A) && canAttacco ) // Attiva la 
+            if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la 
             {
                 Debug.Log("Attacco avviato!");
                 //canShild = false;
@@ -143,13 +152,13 @@ public class pgScript : MonoBehaviour
         Vector2 slideDirection = new Vector2(transform.localScale.x, 0).normalized; // Direzione dello scivolamento
         
         rb.linearVelocity = slideDirection * slideSpeed; */
-        bc.size += new Vector2(0, -0.4f);
+        bc.size += new Vector2(0, -2);
         canSlide = false;
         Debug.Log("Inizio scivolata per " + slideDuration + " secondi");
         yield return new WaitForSeconds(slideDuration); // Aspetta la durata dello scivolamento
         Debug.Log("Fine scivolata");
         GetComponent<RectTransform>().position += new Vector3(0, 1, 0);
-        bc.size += new Vector2(0, 0.4f);
+        bc.size += new Vector2(0, 2);
         /* rb.linearVelocity = Vector2.zero; // Ferma il movimento
         rb.gravityScale = originalGravity; // Ripristina la gravità */
 
