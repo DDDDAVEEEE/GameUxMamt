@@ -57,7 +57,11 @@ public class pgScript : MonoBehaviour
         hitboxA.gameObject.SetActive(false);
         hitboxS.gameObject.SetActive(false);
         Cuffie.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
-
+        tre.gameObject.SetActive(false);
+        due.gameObject.SetActive(false);
+        uno.gameObject.SetActive(false);
+        go.gameObject.SetActive(false);
+        StartCoroutine(TempoIniziale());
     }
 
     // Update is called once per frame
@@ -105,9 +109,10 @@ public class pgScript : MonoBehaviour
                 //canShild = false;
 
             }
+            transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
         }
         //-------------------------------------------------------------------------------------------------------------------
-        transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);//movimento player
+        //movimento player
         //rb.linearVelocityX = (speed * Time.deltaTime);
         //rb.AddForceX(speed);  
         //rb.AddForce(transform.right*speed);
@@ -119,7 +124,23 @@ public class pgScript : MonoBehaviour
      { 
          rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
      }*/
-     IEnumerator Shild()
+    IEnumerator TempoIniziale()
+    {
+        tre.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        tre.gameObject.SetActive(false);
+        due.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        due.gameObject.SetActive(false);
+        uno.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        uno.gameObject.SetActive(false);
+        go.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        go.gameObject.SetActive(false);
+        pgIsAlive = true;
+    }
+    IEnumerator Shild()
     {
         Debug.Log("funziona!");
         canShild = false;
@@ -187,7 +208,7 @@ public class pgScript : MonoBehaviour
 
             GameOver();
         }
-        if ((collider.gameObject.tag == "DannoGr"||collider.gameObject.tag == "Proie") && !imm)
+        if ((collider.gameObject.tag == "DannoGr" || collider.gameObject.tag == "Proie") && !imm)
         {
             Debug.Log("prende danno!");
             StartCoroutine(Damage());
@@ -203,6 +224,16 @@ public class pgScript : MonoBehaviour
             Cuffie.gameObject.SetActive(false);
             //StaticScript. = 5;
         }
+        if (collider.gameObject.tag == "Bandiera")
+        {
+            StartCoroutine(Vittoria());
+        }
+    }
+    IEnumerator Vittoria()
+    {
+        yield return new WaitForSeconds(1f);
+        pgIsAlive = false;
+        //ANIMAZIONE VITTORIA / IDLE
     }
     IEnumerator Damage()
     {
