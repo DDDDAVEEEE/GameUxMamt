@@ -2779,7 +2779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.87, y: -3.21}
+  m_AnchoredPosition: {x: 0.87, y: -3.31}
   m_SizeDelta: {x: 0.5943, y: 0.3028}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1219380854
@@ -2826,7 +2826,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -3337038689812066966, guid: 4f17193acade88f46a3529c56bc20107, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: d0b637633def828488ab5351fa5c68bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2934,7 +2934,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.13370132, y: -0.035315037}
+  m_Offset: {x: 0.13370132, y: 0.045755982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2944,7 +2944,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0071428, y: 2.3272786}
+  m_Size: {x: 1.0071428, y: 2.1651366}
   m_EdgeRadius: 0
 --- !u!114 &1219380859
 MonoBehaviour:

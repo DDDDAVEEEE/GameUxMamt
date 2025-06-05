@@ -229,6 +229,7 @@ public class pgScript : MonoBehaviour
             StartCoroutine(Vittoria());
         }
     }
+
     IEnumerator Vittoria()
     {
         yield return new WaitForSeconds(1f);

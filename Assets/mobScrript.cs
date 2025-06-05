@@ -16,7 +16,7 @@ public class mobScrript : MonoBehaviour
     IEnumerator Morte()
     {
         //inserire animazione
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0);
         gameObject.SetActive(false);
     }
 }
