@@ -21,11 +21,8 @@ TagManager:
   - col
   - Shild
   - Proie
-  - tut1
-  - tut2
-  - tut3
-  - tut4
   - Bandiera
+  - mob
   layers:
   - Default
   - TransparentFX
