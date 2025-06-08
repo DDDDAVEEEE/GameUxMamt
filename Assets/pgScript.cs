@@ -73,7 +73,7 @@ public class pgScript : MonoBehaviour
         //-------------------------------------------------------------------------------------------------------------------
         //horizontal = Input.GetAxisRaw("Horizontal");
 
-
+        anim.SetBool("isRunning", true);
 
         if (pgIsAlive == true)
         {
@@ -87,7 +87,7 @@ public class pgScript : MonoBehaviour
             }
             else
             {
-                anim.SetBool("isRunning", true);
+                
                 anim.SetBool("isJumping", false);
             }
             //-------------------------------------------------------------------------------------------------------------------
@@ -102,7 +102,7 @@ public class pgScript : MonoBehaviour
             }
             else
             {
-                anim.SetBool("isRunning", true);
+                
                 anim.SetBool("isSlide", false);
             }
             //-------------------------------------------------------------------------------------------------------------------   
@@ -121,7 +121,7 @@ public class pgScript : MonoBehaviour
             else
             {
                 anim.SetBool("isAttacco", false);
-                anim.SetBool("isRunning", true);
+            
             }
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la 
@@ -139,7 +139,7 @@ public class pgScript : MonoBehaviour
             }
             else
             {
-                anim.SetBool("isRunning", true);
+                
                 anim.SetBool("isShild", false);
             }
             transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
@@ -229,12 +229,21 @@ public class pgScript : MonoBehaviour
         if (collision.gameObject.tag == "ground")
         {
             isJumping = false;
-        }   
+        }
         if (collision.gameObject.tag == "DannoGr" && !imm)
         {
-             Debug.Log("prende danno!");
+            Debug.Log("prende danno!");
             StartCoroutine(Damage());
         }
+        if (collision.gameObject.tag == "mob" && !imm)
+        {
+            Debug.Log("prende danno!");
+            if (collision.gameObject.tag == "Attacco")
+                        Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
+            else
+                        StartCoroutine(Damage());
+        }
+        
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {

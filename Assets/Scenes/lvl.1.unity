@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 414509610}
   m_Layer: 5
   m_Name: Pipistrello
-  m_TagString: DannoGr
+  m_TagString: mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   due: {fileID: 24200708}
   uno: {fileID: 1741389034}
   go: {fileID: 369485537}
-  Cestino: {fileID: 1611258925}
+  anim: {fileID: 1219380860}
   hp: 3
 --- !u!61 &1219380858
 BoxCollider2D:
