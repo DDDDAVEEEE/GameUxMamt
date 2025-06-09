@@ -73,36 +73,35 @@ public class pgScript : MonoBehaviour
         //-------------------------------------------------------------------------------------------------------------------
         //horizontal = Input.GetAxisRaw("Horizontal");
 
-        anim.SetBool("isRunning", true);
+
 
         if (pgIsAlive == true)
         {
             if (Input.GetKeyDown(KeyCode.W) && !isJumping)//jump
             {
-                anim.SetBool("isRunning", false);
                 anim.SetBool("isJumping", true);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jump);
-                anim.SetBool("isRunning", true);
+
                 isJumping = true;
             }
             else
             {
-                
+                //anim.SetBool("isRunning", true);
                 anim.SetBool("isJumping", false);
             }
             //-------------------------------------------------------------------------------------------------------------------
             if (Input.GetKeyDown(KeyCode.S) && canSlide && !isJumping) // Attiva la scivolata premendo Shift
             {
                 Debug.Log("Scivolata avviata!");
-                anim.SetBool("isRunning", false);
+
                 anim.SetBool("isSlide", true);
                 StartCoroutine(Slide());
-                anim.SetBool("isRunning", true);
+
 
             }
             else
             {
-                
+                //anim.SetBool("isRunning", true);
                 anim.SetBool("isSlide", false);
             }
             //-------------------------------------------------------------------------------------------------------------------   
@@ -111,17 +110,18 @@ public class pgScript : MonoBehaviour
                 Debug.Log("Attacco avviato!");
                 //canShild = false;
                 //canAttacco = true;
-                anim.SetBool("isAttacco", true);
+
                 anim.SetBool("isRunning", false);
                 StartCoroutine(Attacco());
-                anim.SetBool("isRunning", true);
+
                 //canAttacco = false;
                 //canShild = true;        
             }
             else
             {
+                //anim.SetBool("isRunning", true);
                 anim.SetBool("isAttacco", false);
-            
+
             }
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la 
@@ -129,31 +129,40 @@ public class pgScript : MonoBehaviour
                 Debug.Log("Scudo avviato!");
                 //canAttacco = false;
                 //canShild = true;
-                anim.SetBool("isRunning", false);
+
                 anim.SetBool("isShild", true);
                 StartCoroutine(Shild());
-                anim.SetBool("isRunning", true);
+
                 //canAttacco = true;
                 //canShild = false;
 
             }
             else
             {
-                
+                //anim.SetBool("isRunning", true);
                 anim.SetBool("isShild", false);
             }
-            transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
-            
 
-            
+            transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
+            if (!canShild && !canAttacco && !canSlide)
+            {
+                anim.SetBool("isRunning", true);
+
+            }
+
+
+        }
+        else
+        {
+            //animazione vittoria/idle
         }
         //-------------------------------------------------------------------------------------------------------------------
         //movimento player
         //rb.linearVelocityX = (speed * Time.deltaTime);
         //rb.AddForceX(speed);  
         //rb.AddForce(transform.right*speed);
-        
-        //-------------------------------------------------------------------------------------------------------------------
+
+            //-------------------------------------------------------------------------------------------------------------------
 
     }
     /* void FixedUpdate()
