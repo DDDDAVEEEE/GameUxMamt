@@ -48,6 +48,7 @@ public class pgScript : MonoBehaviour
     public GameObject go;
    
     public Animator anim;
+   // public Animator animMob;
     public int hp = 3;
     //--------------------------------------------------------------------------------------------
     void Start()
@@ -147,7 +148,15 @@ public class pgScript : MonoBehaviour
             if (!canShild && !canAttacco && !canSlide)
             {
                 anim.SetBool("isRunning", true);
+               /* anim.SetBool("isShild", false);
+                anim.SetBool("isAttacco", false);
+                anim.SetBool("isSlide", false);
+                anim.SetBool("isJumping", false);*/
 
+            }
+            else
+            {
+                anim.SetBool("isRunning", false);
             }
 
 
@@ -248,9 +257,11 @@ public class pgScript : MonoBehaviour
         {
             Debug.Log("prende danno!");
             if (collision.gameObject.tag == "Attacco")
-                        Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
+                Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
             else
-                        StartCoroutine(Damage());
+            {                
+                StartCoroutine(Damage());
+            }            
         }
         
     }
