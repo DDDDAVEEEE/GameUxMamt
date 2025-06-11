@@ -22,9 +22,10 @@ public class mobScrript : MonoBehaviour
     IEnumerator Morte()
     {
         //inserire animazione
-        GetComponent<Collider2D>().enabled = false;
-        bc.size += new Vector2(0, -2);
+        bc.size += new Vector2(0, -4);
         anim.SetBool("Hurt", true);
+        GetComponent<Collider2D>().enabled = false;
+        
         yield return new WaitForSeconds(0);
         
     }

@@ -1,0 +1,555 @@
+fileFormatVersion: 2
+guid: 428e72eaf9a6c484980dcd6d328c6fd2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1948341387453098847
+    second: trasferimento (19)-Photoroom_0
+  - first:
+      213: -5573350220011385664
+    second: trasferimento (19)-Photoroom_1
+  - first:
+      213: 8683403053389559114
+    second: trasferimento (19)-Photoroom_2
+  - first:
+      213: 7083841423670512359
+    second: trasferimento (19)-Photoroom_3
+  - first:
+      213: -3508811149793924883
+    second: trasferimento (19)-Photoroom_4
+  - first:
+      213: 8606933243472551435
+    second: trasferimento (19)-Photoroom_5
+  - first:
+      213: -5760981124808339506
+    second: trasferimento (19)-Photoroom_6
+  - first:
+      213: 1617184872608839687
+    second: trasferimento (19)-Photoroom_7
+  - first:
+      213: 2923577731796895042
+    second: trasferimento (19)-Photoroom_8
+  - first:
+      213: -6087185143994962522
+    second: trasferimento (19)-Photoroom_9
+  - first:
+      213: -8710847657913952010
+    second: trasferimento (19)-Photoroom_10
+  - first:
+      213: 5540649383161331882
+    second: trasferimento (19)-Photoroom_11
+  - first:
+      213: 3754775895202034106
+    second: trasferimento (19)-Photoroom_12
+  - first:
+      213: 1422490290241308566
+    second: trasferimento (19)-Photoroom_13
+  - first:
+      213: 3999037538309238032
+    second: trasferimento (19)-Photoroom_14
+  - first:
+      213: -1259439017410009348
+    second: trasferimento (19)-Photoroom_15
+  - first:
+      213: 7745294967138459270
+    second: trasferimento (19)-Photoroom_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 833
+        width: 46
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b655c4b26e90b10800000000000000
+      internalID: 1948341387453098847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 718
+        width: 175
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc4067f08b77a2b0800000000000000
+      internalID: -5573350220011385664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 734
+        width: 469
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45b3d60215a18870800000000000000
+      internalID: 8683403053389559114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 582
+        width: 175
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea04173e3cde4260800000000000000
+      internalID: 7083841423670512359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 594
+        width: 469
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de86a9889d23e4fc0800000000000000
+      internalID: -3508811149793924883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 447
+        width: 174
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e9ea6fe28f17770800000000000000
+      internalID: 8606933243472551435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 449
+        width: 209
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf8112a032ec00b0800000000000000
+      internalID: -5760981124808339506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 448
+        width: 175
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7083cfbc215617610800000000000000
+      internalID: 1617184872608839687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 405
+        width: 46
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2450ff01572a29820800000000000000
+      internalID: 2923577731796895042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 312
+        width: 175
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad2522ec59f58ba0800000000000000
+      internalID: -6087185143994962522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 312
+        width: 176
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8de79053adc1780800000000000000
+      internalID: -8710847657913952010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 312
+        width: 91
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa08154224754ec40800000000000000
+      internalID: 5540649383161331882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 312
+        width: 174
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab177b478c4ab1430800000000000000
+      internalID: 3754775895202034106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 176
+        width: 174
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 697864ed163bdb310800000000000000
+      internalID: 1422490290241308566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 202
+        width: 470
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01def5a047f6f7730800000000000000
+      internalID: 3999037538309238032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 41
+        width: 175
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6620fe2e2958ee0800000000000000
+      internalID: -1259439017410009348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trasferimento (19)-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 69
+        width: 470
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e98ec7cb0dc7b60800000000000000
+      internalID: 7745294967138459270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

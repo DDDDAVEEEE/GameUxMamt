@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4f81a2df90121ef46bae9a6d6f2487f6
+guid: 592eed4ccfc09c74ba0aa1d582df2405
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -704772479695758374
-    second: sfondo terzo livello_0
+      213: -3337038689812066966
+    second: pixil-frame-0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sfondo terzo livello_0
+      name: pixil-frame-0_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 263
+        y: 167
+        width: 218
+        height: 410
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adb534ce9252836f0800000000000000
-      internalID: -704772479695758374
+      spriteID: a6d4404fdf470b1d0800000000000000
+      internalID: -3337038689812066966
       vertices: []
       indices: 
       edges: []

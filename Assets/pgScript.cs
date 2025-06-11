@@ -48,7 +48,7 @@ public class pgScript : MonoBehaviour
     public GameObject go;
    
     public Animator anim;
-   // public Animator animMob;
+   public Animator animCestino;
     public int hp = 3;
     //--------------------------------------------------------------------------------------------
     void Start()
@@ -112,7 +112,7 @@ public class pgScript : MonoBehaviour
                 //canShild = false;
                 //canAttacco = true;
 
-                anim.SetBool("isRunning", false);
+                anim.SetBool("isAttacco", true);
                 StartCoroutine(Attacco());
 
                 //canAttacco = false;
@@ -148,15 +148,16 @@ public class pgScript : MonoBehaviour
             if (!canShild && !canAttacco && !canSlide)
             {
                 anim.SetBool("isRunning", true);
-               /* anim.SetBool("isShild", false);
-                anim.SetBool("isAttacco", false);
-                anim.SetBool("isSlide", false);
-                anim.SetBool("isJumping", false);*/
+                /* anim.SetBool("isShild", false);
+                 anim.SetBool("isAttacco", false);
+                 anim.SetBool("isSlide", false);
+                 anim.SetBool("isJumping", false);*/
 
             }
             else
             {
                 anim.SetBool("isRunning", false);
+
             }
 
 
@@ -164,6 +165,8 @@ public class pgScript : MonoBehaviour
         else
         {
             //animazione vittoria/idle
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isRunning", false);
         }
         //-------------------------------------------------------------------------------------------------------------------
         //movimento player
@@ -259,11 +262,17 @@ public class pgScript : MonoBehaviour
             if (collision.gameObject.tag == "Attacco")
                 Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
             else
-            {                
+            {
                 StartCoroutine(Damage());
-            }            
+            }
         }
-        
+        if (collision.gameObject.tag == "Proie" && !imm)
+        {
+            if (collision.gameObject.tag == "Shild")
+                Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
+                else
+                        StartCoroutine(Damage());
+        }
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
@@ -281,7 +290,8 @@ public class pgScript : MonoBehaviour
         if (collider.gameObject.tag == "CestinoDopo")
         {
             // Debug.Log("CambioAnimazione");
-            // Cestino.SetTrigger("CestinoDopo");  
+            animCestino.SetBool("isNormal", false);
+            animCestino.SetBool("isCestinoDopo", true); 
         }
         if (collider.gameObject.tag == "col")
         {

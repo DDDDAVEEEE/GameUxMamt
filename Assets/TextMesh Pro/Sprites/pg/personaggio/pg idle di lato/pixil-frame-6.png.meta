@@ -116,10 +116,10 @@ TextureImporter:
       name: pixil-frame-6_0
       rect:
         serializedVersion: 2
-        x: 209
-        y: 159
-        width: 192
-        height: 302
+        x: 419
+        y: 319
+        width: 382
+        height: 602
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
