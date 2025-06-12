@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pavimento terzo livello_0: 4463749335734069689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

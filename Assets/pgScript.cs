@@ -23,7 +23,7 @@ public class pgScript : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D bc;
     public BoxCollider2D hitboxA;
-    public BoxCollider2D hitboxS;
+    public CircleCollider2D hitboxS;
     public BoxCollider2D Cuffie;
 
     //--------------------------------------------------------------------------------------------
@@ -53,6 +53,7 @@ public class pgScript : MonoBehaviour
     //--------------------------------------------------------------------------------------------
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
@@ -65,6 +66,7 @@ public class pgScript : MonoBehaviour
         go.gameObject.SetActive(false);
 
         StartCoroutine(TempoIniziale());
+        
     }
 
     // Update is called once per frame
@@ -80,30 +82,20 @@ public class pgScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W) && !isJumping)//jump
             {
-                anim.SetBool("isJumping", true);
+                anim.SetBool("IsJumping", true);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jump);
 
                 isJumping = true;
-            }
-            else
-            {
-                //anim.SetBool("isRunning", true);
-                anim.SetBool("isJumping", false);
+                StartCoroutine(Jump());
             }
             //-------------------------------------------------------------------------------------------------------------------
             if (Input.GetKeyDown(KeyCode.S) && canSlide && !isJumping) // Attiva la scivolata premendo Shift
             {
                 Debug.Log("Scivolata avviata!");
 
-                anim.SetBool("isSlide", true);
                 StartCoroutine(Slide());
 
 
-            }
-            else
-            {
-                //anim.SetBool("isRunning", true);
-                anim.SetBool("isSlide", false);
             }
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(KeyCode.A) && canAttacco) // Attiva la 
@@ -112,17 +104,11 @@ public class pgScript : MonoBehaviour
                 //canShild = false;
                 //canAttacco = true;
 
-                anim.SetBool("isAttacco", true);
+                
                 StartCoroutine(Attacco());
 
                 //canAttacco = false;
                 //canShild = true;        
-            }
-            else
-            {
-                //anim.SetBool("isRunning", true);
-                anim.SetBool("isAttacco", false);
-
             }
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(KeyCode.D) && canShild) // Attiva la 
@@ -131,43 +117,38 @@ public class pgScript : MonoBehaviour
                 //canAttacco = false;
                 //canShild = true;
 
-                anim.SetBool("isShild", true);
+                
                 StartCoroutine(Shild());
 
                 //canAttacco = true;
                 //canShild = false;
 
             }
-            else
-            {
-                //anim.SetBool("isRunning", true);
-                anim.SetBool("isShild", false);
-            }
 
             transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
             if (!canShild && !canAttacco && !canSlide)
             {
-                anim.SetBool("isRunning", true);
-                /* anim.SetBool("isShild", false);
-                 anim.SetBool("isAttacco", false);
-                 anim.SetBool("isSlide", false);
-                 anim.SetBool("isJumping", false);*/
+                anim.SetBool("IsRunning", true);
+                /* anim.SetBool("IsShield", false);
+                 anim.SetBool("IsAttacco", false);
+                 anim.SetBool("IsSlide", false);
+                 anim.SetBool("IsJumping", false);*/
 
             }
             else
             {
-                anim.SetBool("isRunning", false);
+                anim.SetBool("IsRunning", false);
 
             }
 
 
         }
-        else
+        /*else
         {
             //animazione vittoria/idle
-            anim.SetBool("isIdle", true);
-            anim.SetBool("isRunning", false);
-        }
+            anim.SetBool("IsIdle", true);
+            anim.SetBool("IsRunning", false);
+        }*/
         //-------------------------------------------------------------------------------------------------------------------
         //movimento player
         //rb.linearVelocityX = (speed * Time.deltaTime);
@@ -183,6 +164,7 @@ public class pgScript : MonoBehaviour
      }*/
     IEnumerator TempoIniziale()
     {
+        anim.SetBool("IsIdle", true);
         tre.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         tre.gameObject.SetActive(false);
@@ -191,19 +173,32 @@ public class pgScript : MonoBehaviour
         due.gameObject.SetActive(false);
         uno.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
+        anim.SetBool("IsIdle", false);
         uno.gameObject.SetActive(false);
         go.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         go.gameObject.SetActive(false);
         pgIsAlive = true;
     }
+
+    IEnumerator Jump()
+    {
+        anim.SetBool("IsJumping", true);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jump);
+        isJumping = true;
+        yield return new WaitForSeconds(0.5f);
+        anim.SetBool("IsJumping", true);
+    }
+    
     IEnumerator Shild()
     {
         Debug.Log("funziona!");
+        anim.SetBool("IsShield", true);
         canShild = false;
         canAttacco = false;
         hitboxS.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+        anim.SetBool("IsShield", false);
         hitboxS.gameObject.SetActive(false);
         canAttacco = true;
         canShild = true;
@@ -213,10 +208,12 @@ public class pgScript : MonoBehaviour
     IEnumerator Attacco()
     {
         Debug.Log("funziona attacco!");
+        anim.SetBool("IsAttacco", true);
         canAttacco = false;
         canShild = false;
         hitboxA.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+        anim.SetBool("IsAttacco", false);
         hitboxA.gameObject.SetActive(false);
         canAttacco = true;
         canShild = true;
@@ -230,10 +227,13 @@ public class pgScript : MonoBehaviour
         Vector2 slideDirection = new Vector2(transform.localScale.x, 0).normalized; // Direzione dello scivolamento
         
         rb.linearVelocity = slideDirection * slideSpeed; */
+        anim.SetBool("IsSlide", true);
+        if(jump)
         bc.size += new Vector2(0, -2);
         canSlide = false;
         Debug.Log("Inizio scivolata per " + slideDuration + " secondi");
-        yield return new WaitForSeconds(slideDuration); // Aspetta la durata dello scivolamento
+        yield return new WaitForSeconds(slideDuration); // Aspetta la durata dello 
+        anim.SetBool("IsSlide", false);
         Debug.Log("Fine scivolata");
         GetComponent<RectTransform>().position += new Vector3(0, 1, 0);
         bc.size += new Vector2(0, 2);
@@ -270,8 +270,10 @@ public class pgScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "Shild")
                 Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
-                else
-                        StartCoroutine(Damage());
+            else
+            {
+                StartCoroutine(Damage());
+            } 
         }
     }
     public void OnTriggerEnter2D(Collider2D collider)
@@ -290,8 +292,8 @@ public class pgScript : MonoBehaviour
         if (collider.gameObject.tag == "CestinoDopo")
         {
             // Debug.Log("CambioAnimazione");
-            animCestino.SetBool("isNormal", false);
-            animCestino.SetBool("isCestinoDopo", true); 
+            animCestino.SetBool("IsNormal", false);
+            animCestino.SetBool("IsCestinoDopo", true); 
         }
         if (collider.gameObject.tag == "col")
         {
@@ -315,8 +317,8 @@ public class pgScript : MonoBehaviour
     {
         
         Debug.Log("decrementa hp!");
-        if (!imm) { 
-            
+        if (!imm) {
+            anim.SetBool("IsDamage",true);
             hp--;
             switch (hp)
             {
@@ -330,6 +332,7 @@ public class pgScript : MonoBehaviour
                 StartCoroutine(Immortalita());
                     life2.GetComponent<Animator>().Play("VitaVuota");
                     yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    anim.SetBool("IsDamage",false);
                     Destroy(life2);
                     break;
                 case 2:
@@ -337,6 +340,7 @@ public class pgScript : MonoBehaviour
                     Debug.Log("leva la terza vita!");
                     life3.GetComponent<Animator>().Play("life1");
                     yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    anim.SetBool("IsDamage",false);
                    Destroy(life3);
                     break;
             }
