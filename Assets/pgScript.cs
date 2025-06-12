@@ -228,7 +228,7 @@ public class pgScript : MonoBehaviour
         
         rb.linearVelocity = slideDirection * slideSpeed; */
         anim.SetBool("IsSlide", true);
-        if(jump)
+        
         bc.size += new Vector2(0, -2);
         canSlide = false;
         Debug.Log("Inizio scivolata per " + slideDuration + " secondi");
