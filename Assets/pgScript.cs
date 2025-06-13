@@ -303,32 +303,32 @@ public class pgScript : MonoBehaviour
         
         Debug.Log("decrementa hp!");
         if (!imm) {
+            imm = true;
             anim.SetBool("IsDamage",true);
             hp--;
             switch (hp)
             {
                 case 0:
-                StartCoroutine(Immortalita());
                     life1.GetComponent<Animator>().Play("life1");
                     yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                     GameOver();
                     break;
                 case 1:
-                StartCoroutine(Immortalita());
                     life2.GetComponent<Animator>().Play("VitaVuota");
                     yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                     anim.SetBool("IsDamage",false);
                     Destroy(life2);
                     break;
                 case 2:
-                StartCoroutine(Immortalita());
                     Debug.Log("leva la terza vita!");
                     life3.GetComponent<Animator>().Play("life1");
                     yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                     anim.SetBool("IsDamage",false);
-                   Destroy(life3);
+                    Destroy(life3);
                     break;
             }
+            new WaitForSeconds(1f);
+            imm = false;
         }
     }
     public void GameOver()
@@ -336,14 +336,5 @@ public class pgScript : MonoBehaviour
         hp = 3;
         StaticScript.livello = 5;
         SceneManager.LoadSceneAsync(8);//game over
-    }
-    IEnumerator Immortalita()
-    {
-        imm = true;
-        //GetComponent<Animator>().Play("imm");//animazione immortalita
-        yield return new WaitForSeconds(2f); // tempo di immortalita    
-
-        imm = false;
-        //GetComponent<Animator>().("normal");//animazione immortalita
     }
 }
