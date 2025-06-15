@@ -25,7 +25,7 @@ public class SparatoreDritto : MonoBehaviour
         if (distance < 20)
         {
             timer += Time.deltaTime;
-            if (timer > 0.5)
+            if (timer > 2)
             {
                 timer = 0;
                 shoot();
