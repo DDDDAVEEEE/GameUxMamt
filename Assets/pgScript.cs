@@ -47,18 +47,31 @@ public class pgScript : MonoBehaviour
     public GameObject due;
     public GameObject uno;
     public GameObject go;
-   
     public Animator anim;
   // public Animator animCestino;
     public int hp = 3;
     //--------------------------------------------------------------------------------------------
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         coll = GameObject.FindGameObjectWithTag("col").GetComponent<BoxCollider2D>();
+        switch (PlayerPrefs.GetInt("Lvl"))
+        {
+            case 0:
+                if(PlayerPrefs.GetInt("col1")==1)
+                Destroy(GameObject.FindGameObjectWithTag("col"));
+                break;
+            case 1:
+                if(PlayerPrefs.GetInt("col2")==1)
+                Destroy(GameObject.FindGameObjectWithTag("col"));
+                break;
+            case 2:
+                if(PlayerPrefs.GetInt("col3")==1)
+                Destroy(GameObject.FindGameObjectWithTag("col"));
+                break;
+        }
         hitboxA.gameObject.SetActive(false);
         hitboxS.gameObject.SetActive(false);
         coll.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
@@ -304,6 +317,18 @@ public class pgScript : MonoBehaviour
         if (collider.gameObject.tag == "col")
         {
             Debug.Log("DDistruzione");
+            switch (PlayerPrefs.GetInt("Lvl"))
+            {
+                case 0:
+                    PlayerPrefs.SetInt("col1", 1);
+                    break;
+                case 1:
+                    PlayerPrefs.SetInt("col2", 1);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("col3", 1);
+                    break;
+            }
             coll.gameObject.SetActive(false);
             //StaticScript. = 5;
         }
@@ -352,7 +377,6 @@ public class pgScript : MonoBehaviour
     public void GameOver()
     {
         hp = 3;
-        StaticScript.livello = 5;
         SceneManager.LoadSceneAsync(8);//game over
     }
     IEnumerator Immortalita()

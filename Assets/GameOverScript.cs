@@ -9,13 +9,9 @@ public class GameOverScript : MonoBehaviour
     void Start()
     {
         instance = this;
-        lvl = StaticScript.livello;
+        lvl = PlayerPrefs.GetInt("Lvl")+4;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void livello(int idk)
-    {
-        lvl = idk;
-    }
     public void Riprova()
     {
         SceneManager.LoadSceneAsync(lvl);
