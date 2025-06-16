@@ -147,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 748144582886911133}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4c37e1b06914a0c4cae1dd7a260641a1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 991197e664bb0b14682314e6db16b869, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -171,12 +171,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dc7d63f660d16498c3c923196989d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   Proiettile: {fileID: 7230030324936058488, guid: fb2bd3c411df0a0469d5b0db58511024, type: 3}
   pos: {fileID: 788165885870873135}
   frequenza: 1
+  bc: {fileID: 0}
   player: {fileID: 0}
   fisso: 1
+  speed: 0
+  raggio: 10
 --- !u!1 &9002151965525623043
 GameObject:
   m_ObjectHideFlags: 0

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slide summer5_0: -4057279024129383677
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
