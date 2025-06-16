@@ -10,7 +10,6 @@ public class SkinSelector : MonoBehaviour
     public List<Sprite> skins = new List<Sprite>();
     
     public string[] skinNames;
-    public GameObject PlayerSKin;
     public TMP_Text nameText;
     private int currentIndex = 0;
 
