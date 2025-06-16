@@ -24,6 +24,9 @@ public class selezioneLVLScript : MonoBehaviour
     }
 
     public void cambioSelezione (string nuovo){
+        if (nuovo == "lvl1") PlayerPrefs.SetInt("Lvl", 1);
+        else if (nuovo == "lvl2") PlayerPrefs.SetInt("Lvl", 2);
+        else if (nuovo == "lvl3") PlayerPrefs.SetInt("Lvl", 3);
         start = GameObject.FindGameObjectWithTag(nuovo).GetComponent<Button>();
     }
     // Update is called once per frame

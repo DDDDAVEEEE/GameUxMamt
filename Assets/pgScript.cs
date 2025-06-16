@@ -352,7 +352,6 @@ public class pgScript : MonoBehaviour
     public void GameOver()
     {
         hp = 3;
-        StaticScript.livello = 5;
         SceneManager.LoadSceneAsync(8);//game over
     }
     IEnumerator Immortalita()
