@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      piattaforma fluttuante_0: 4155853703763668276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

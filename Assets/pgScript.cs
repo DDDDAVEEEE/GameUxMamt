@@ -5,6 +5,8 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.SceneManagement;
 using Unity.Collections;
+using UnityEditor.Animations;
+using System.Collections.Generic;
 
 public class pgScript : MonoBehaviour
 {
@@ -26,6 +28,7 @@ public class pgScript : MonoBehaviour
     public BoxCollider2D hitboxA;
     public CircleCollider2D hitboxS;
     public BoxCollider2D coll;
+    public List<AnimatorController> skins = new List<AnimatorController>();
 
     //--------------------------------------------------------------------------------------------
     private bool isJumping = false;
@@ -53,9 +56,11 @@ public class pgScript : MonoBehaviour
     //--------------------------------------------------------------------------------------------
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        anim.runtimeAnimatorController = skins[PlayerPrefs.GetInt("SelectedSkin")];
         coll = GameObject.FindGameObjectWithTag("col").GetComponent<BoxCollider2D>();
         switch (PlayerPrefs.GetInt("Lvl"))
         {

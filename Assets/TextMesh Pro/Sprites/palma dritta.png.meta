@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palma dritta_0: 546803557926379730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palma che funge da piattaforma alta_0: -6407201999521214731
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
