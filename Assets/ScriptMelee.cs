@@ -8,20 +8,21 @@ public class ScriptMelee : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Animator anim;
     public BoxCollider2D bc;
-    public BoxCollider2D pg;
+    private BoxCollider2D pg;
     public bool isDam = false;
     public bool isAtt = false;
 
     void Start()
     {
-        bc = GetComponent<BoxCollider2D>();
-        pg = GetComponent<BoxCollider2D>();
-        anim = GetComponent<Animator>();
+        bc = this.GetComponent<BoxCollider2D>();
+        pg = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
+        anim = this.GetComponent<Animator>();
     }
     private void Update()
     {
-        if ((bc.bounds.center.x - pg.bounds.center.x) < 5f && !isDam&& !isAtt)
+        if (bc.Distance(pg).distance < 5f && !isDam && !isAtt)
         {
+            Debug.Log(bc.Distance(pg).distance);
             StartCoroutine(Attacco());
         }
     }
@@ -30,6 +31,7 @@ public class ScriptMelee : MonoBehaviour
         if (collider.gameObject.tag == "Attacco")
         {
             //inserire animazione
+            bc.enabled = false;
             anim.SetBool("isDam", true);
             isDam = true;
             //StartCoroutine(Morte());

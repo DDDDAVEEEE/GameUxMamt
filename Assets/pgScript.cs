@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.SceneManagement;
+using Unity.Collections;
 
 public class pgScript : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class pgScript : MonoBehaviour
     public BoxCollider2D bc;
     public BoxCollider2D hitboxA;
     public CircleCollider2D hitboxS;
-    public BoxCollider2D Cuffie;
+    public BoxCollider2D coll;
 
     //--------------------------------------------------------------------------------------------
     private bool isJumping = false;
@@ -57,9 +58,10 @@ public class pgScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        coll = GameObject.FindGameObjectWithTag("col").GetComponent<BoxCollider2D>();
         hitboxA.gameObject.SetActive(false);
         hitboxS.gameObject.SetActive(false);
-        Cuffie.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
+        coll.gameObject.SetActive(true); // serve per farlo riapparire, DA CAMBIARE!
         tre.gameObject.SetActive(false);
         due.gameObject.SetActive(false);
         uno.gameObject.SetActive(false);
@@ -212,7 +214,7 @@ public class pgScript : MonoBehaviour
         canAttacco = false;
         canShild = false;
         hitboxA.gameObject.SetActive(true);
-        yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+        yield return new WaitForSeconds(0.25f); // Aspetta il tempo di ricarica
         anim.SetBool("IsAttacco", false);
         hitboxA.gameObject.SetActive(false);
         canAttacco = true;
@@ -232,14 +234,11 @@ public class pgScript : MonoBehaviour
         bc.size += new Vector2(1.2f, -1);
         bc.offset += new Vector2(0, -0.5f);
         canSlide = false;
-        Debug.Log("Inizio scivolata per " + slideDuration + " secondi");
         yield return new WaitForSeconds(slideDuration); // Aspetta la durata dello 
         anim.SetBool("IsSlide", false);
-        Debug.Log("Fine scivolata");
         GetComponent<RectTransform>().position += new Vector3(0, 0.5f, 0);
         bc.size -= new Vector2(1.2f, -1);
         bc.offset -= new Vector2(0, -0.5f);
-        anim.SetBool("IsSlide", false);
         /* rb.linearVelocity = Vector2.zero; // Ferma il movimento
         rb.gravityScale = originalGravity; // Ripristina la gravità */
 
@@ -262,7 +261,7 @@ public class pgScript : MonoBehaviour
         if (collision.gameObject.tag == "mob" && !imm)
         {
             Debug.Log("prende danno!");
-            if (collision.gameObject.tag == "Attacco")
+            if (anim.GetBool("IsAttacco"))
                 Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
             else
             {
@@ -271,8 +270,13 @@ public class pgScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "Proie" && !imm)
         {
-            if (collision.gameObject.tag == "Shild")
-                Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
+            if (anim.GetBool("IsShield"))
+            {
+                anim.SetBool("IsShield", false);
+                hitboxS.gameObject.SetActive(false);
+                canAttacco = true;
+                canShild = true;
+            }
             else
             {
                 StartCoroutine(Damage());
@@ -300,7 +304,7 @@ public class pgScript : MonoBehaviour
         if (collider.gameObject.tag == "col")
         {
             Debug.Log("DDistruzione");
-            Cuffie.gameObject.SetActive(false);
+            coll.gameObject.SetActive(false);
             //StaticScript. = 5;
         }
         if (collider.gameObject.tag == "Bandiera")
@@ -325,15 +329,12 @@ public class pgScript : MonoBehaviour
             switch (hp)
             {
                 case 0:
-                StartCoroutine(Immortalita());
-                    life1.GetComponent<Animator>().Play("VitaVuota");
-                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
                     GameOver();
                     break;
                 case 1:
                 StartCoroutine(Immortalita());
                     life2.GetComponent<Animator>().Play("VitaVuota");
-                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    yield return new WaitForSeconds(0.1f); // Aspetta il tempo di ricarica
                     anim.SetBool("IsDamage",false);
                     Destroy(life2);
                     break;
@@ -341,7 +342,7 @@ public class pgScript : MonoBehaviour
                 StartCoroutine(Immortalita());
                     Debug.Log("leva la terza vita!");
                     life3.GetComponent<Animator>().Play("VitaVuota");
-                    yield return new WaitForSeconds(0.5f); // Aspetta il tempo di ricarica
+                    yield return new WaitForSeconds(0.1f); // Aspetta il tempo di ricarica
                     anim.SetBool("IsDamage",false);
                    Destroy(life3);
                     break;
