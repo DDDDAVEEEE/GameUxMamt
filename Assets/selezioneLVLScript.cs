@@ -11,11 +11,14 @@ public class selezioneLVLScript : MonoBehaviour
     public Button esci;
     public Button start;
     public KeyCode up;
+    public int skin;
     public KeyCode down;
 
     public static selezioneLVLScript instance;
     void Start()
     {
+        skin = PlayerPrefs.GetInt("SelectedSkin");
+        Debug.Log(skin);
         instance = this;
         esci = GameObject.FindGameObjectWithTag("exit").GetComponent<Button>();
     }

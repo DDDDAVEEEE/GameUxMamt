@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      casonetto_0: 5371071904866060708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
