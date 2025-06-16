@@ -15,36 +15,31 @@ public class sistemacoll : MonoBehaviour
         col2 = PlayerPrefs.GetInt("col2")==1;
         col3 = PlayerPrefs.GetInt("col3")==1;
         
-        if (col1 == false)
+        if (!col1)
         {
-            col1 = false;
-            anim1.Play("vuoto");
+            anim1.SetBool("Nascoste",true);
             tit1.text = "???";
             text1.text = "???";
         }
         else
         {
-            anim1.Play("cuffie");
+            anim1.SetBool("Nascoste",false);
             tit1.text = "Cuffie da gaming";
             text1.text = "Trovare da scrivere";
         }
+        anim2.SetBool("Nascoste",col2);
         if(!col2){
-            col2 = false;
-            anim2.Play("vuoto");
             tit2.text = "???";
             text2.text = "???";
         }else{
-            anim2.Play("microfono");
             tit2.text = "Mic da registrazione";
             text2.text = "Trovare da scrivere";
         }
+        anim3.SetBool("Nascoste",col3);
         if(!col3){
-            col3 = false;
-            anim3.Play("vuoto");
             tit3.text = "???";
             text3.text = "???";
         }else{
-            anim3.Play("cassetta");
             tit3.text = "Mix-Tape";
             text3.text = "Trovare da scrivere";
         }
@@ -64,33 +59,31 @@ public class sistemacoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(col1==false){
-            col1 = false;
-            anim1.Play("vuoto");
+        if (!col1)
+        {
+            anim1.SetBool("Nascoste",true);
             tit1.text = "???";
             text1.text = "???";
-        }else{
-            anim1.Play("cuffie");
+        }
+        else
+        {
+            anim1.SetBool("Nascoste",false);
             tit1.text = "Cuffie da gaming";
             text1.text = "Trovare da scrivere";
         }
+        anim2.SetBool("Nascoste",col2);
         if(!col2){
-            col2 = false;
-            anim2.Play("vuoto");
             tit2.text = "???";
             text2.text = "???";
         }else{
-            anim1.Play("microfono");
             tit2.text = "Mic da registrazione";
             text2.text = "Trovare da scrivere";
         }
+        anim3.SetBool("Nascoste",col3);
         if(!col3){
-            col3 = false;
-            anim3.Play("vuoto");
             tit3.text = "???";
             text3.text = "???";
         }else{
-            anim3.Play("cassetta");
             tit3.text = "Mix-Tape";
             text3.text = "Trovare da scrivere";
         }
