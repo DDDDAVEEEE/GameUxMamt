@@ -3941,8 +3941,8 @@ GameObject:
   - component: {fileID: 1535149744}
   - component: {fileID: 1535149743}
   - component: {fileID: 1535149742}
-  - component: {fileID: 1535149741}
   - component: {fileID: 1535149740}
+  - component: {fileID: 1535149745}
   m_Layer: 5
   m_Name: Cuffie
   m_TagString: col
@@ -3972,19 +3972,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1535149741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535149739}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636676f738fb1914181dd1ae0d6d8526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  depthFactor: 3
 --- !u!61 &1535149742
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4102,9 +4089,25 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88.86005, y: 0.42}
-  m_SizeDelta: {x: 4.1697, y: 1.0341}
+  m_AnchoredPosition: {x: 89.24, y: 0.19}
+  m_SizeDelta: {x: 0.4631, y: 0.4133}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1535149745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535149739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Col","value":{"$content":1,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1 &1545760780
 GameObject:
   m_ObjectHideFlags: 0
