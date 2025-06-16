@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/vittoria.unity
     guid: 2a0784299c534c3488d66541713dae9c
+  - enabled: 1
+    path: Assets/Scenes/Inizio.unity
+    guid: e88a478e1e9efe54e9f7a9b65fa83e1d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

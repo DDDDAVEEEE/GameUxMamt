@@ -342,6 +342,8 @@ public class pgScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         pgIsAlive = false;
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadSceneAsync(9);
         //ANIMAZIONE VITTORIA / IDLE
     }
     IEnumerator Damage()
