@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63.68, y: -3.799}
+  m_AnchoredPosition: {x: 104.46, y: -3.799}
   m_SizeDelta: {x: 4.1697, y: 1.0341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &264008164
@@ -2733,7 +2733,7 @@ SpriteRenderer:
   m_Size: {x: 4.62, y: 3.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1377985074
@@ -4021,11 +4021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3390805629513516823, guid: 02c50c1a0f65337409d5367ff98bd7ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11.562
+      value: 47.33
       objectReference: {fileID: 0}
     - target: {fileID: 3390805629513516823, guid: 02c50c1a0f65337409d5367ff98bd7ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.078
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 3390805629513516823, guid: 02c50c1a0f65337409d5367ff98bd7ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4126,7 +4126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8596254784899601478, guid: 6960cd7c84888ff4da1083fe62916936, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20.79
+      value: -17.22
       objectReference: {fileID: 0}
     - target: {fileID: 8596254784899601478, guid: 6960cd7c84888ff4da1083fe62916936, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4175,7 +4175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4512371409860873237, guid: 6b6b2952315677542a18fab7570642ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.53
+      value: 28.06
       objectReference: {fileID: 0}
     - target: {fileID: 4512371409860873237, guid: 6b6b2952315677542a18fab7570642ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4258,7 +4258,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 991197e664bb0b14682314e6db16b869, type: 2}
     - target: {fileID: 5601928783782734660, guid: 808966dad14a0b64384ef059a1f40c16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3354988
+      value: 9.03
       objectReference: {fileID: 0}
     - target: {fileID: 5601928783782734660, guid: 808966dad14a0b64384ef059a1f40c16, type: 3}
       propertyPath: m_LocalPosition.y
