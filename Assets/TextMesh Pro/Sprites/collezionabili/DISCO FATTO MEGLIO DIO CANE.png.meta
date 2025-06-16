@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f42b5623ed3549a4dbb9a93f00d078df
+guid: 5b6307b8db9b0254ebc7e8d6ac675ba6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6644074346386123566
-    second: attack goth2_0
+      213: 8288429126805200390
+    second: DISCO FATTO MEGLIO DIO CANE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 0.2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack goth2_0
+      name: DISCO FATTO MEGLIO DIO CANE_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 159
-        width: 242
-        height: 322
+        x: 170
+        y: 175
+        width: 403
+        height: 393
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2b61ad8a6e743c50800000000000000
-      internalID: 6644074346386123566
+      spriteID: 60e9939706a660370800000000000000
+      internalID: 8288429126805200390
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack goth2_0: 6644074346386123566
+      DISCO FATTO MEGLIO DIO CANE_0: 8288429126805200390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

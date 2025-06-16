@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,19 @@ public class sistemacoll : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(col1==false){
+        col1 = PlayerPrefs.GetInt("col1")==1;
+        col2 = PlayerPrefs.GetInt("col2")==1;
+        col3 = PlayerPrefs.GetInt("col3")==1;
+        
+        if (col1 == false)
+        {
             col1 = false;
             anim1.Play("vuoto");
             tit1.text = "???";
             text1.text = "???";
-        }else{
+        }
+        else
+        {
             anim1.Play("cuffie");
             tit1.text = "Cuffie da gaming";
             text1.text = "Trovare da scrivere";
@@ -26,7 +34,7 @@ public class sistemacoll : MonoBehaviour
             tit2.text = "???";
             text2.text = "???";
         }else{
-            anim1.Play("microfono");
+            anim2.Play("microfono");
             tit2.text = "Mic da registrazione";
             text2.text = "Trovare da scrivere";
         }
