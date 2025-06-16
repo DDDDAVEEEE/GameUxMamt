@@ -1,38 +1,50 @@
 using UnityEngine;
 using UnityEngine.UI;
-
-public class SkinChangerUI : MonoBehaviour
+using UnityEngine.SceneManagement;
+using TMPro;
+public class SkinSelector : MonoBehaviour
 {
-    public Sprite[] skins;           // Le skin da usare
-    //public string[] skinNames; 
-    public Image imageComponent;     // Il componente Image UI
-    //dpublic Text labelText;
+    public Sprite[] skins;
+    public string[] skinNames;
+    public Image imageUI;
+
+    public TMP_Text nameText;
     private int currentIndex = 0;
 
     void Start()
     {
-        ChangeSkin(0);
+        UpdateSkinDisplay();
     }
 
-    public void ChangeSkin(int index)
+    public void Next()
     {
-        if (index >= 0 && index < skins.Length)
-        {
-            imageComponent.sprite = skins[index];
-            //labelText.text = skinNames[index];
-            currentIndex = index;
-        }
+        currentIndex = (currentIndex + 1) % skins.Length;
+        UpdateSkinDisplay();
     }
 
-    public void NextSkin()
+    public void Previous()
     {
-        int nextIndex = (currentIndex + 1) % skins.Length;
-        ChangeSkin(nextIndex);
+        currentIndex = (currentIndex - 1 + skins.Length) % skins.Length;
+        UpdateSkinDisplay();
     }
 
-    public void PreviousSkin()
+    public void ConfirmAndPlay()
     {
-        int prevIndex = (currentIndex - 1 + skins.Length) % skins.Length;
-        ChangeSkin(prevIndex);
+        PlayerPrefs.SetInt("SelectedSkin", currentIndex);
+        PlayerPrefs.Save();
+        SceneManager.LoadSceneAsync(4);//Selezione livello
+    }
+    public void ReturnToMenuCustom()
+    {
+        SceneManager.LoadSceneAsync(0);//Personalizzazione pg
+    }
+
+    private void UpdateSkinDisplay()
+    {
+        imageUI.sprite = skins[currentIndex];
+
+        nameText.text = skinNames[currentIndex];
+        Debug.Log("Skin Index: " + currentIndex);
+        Debug.Log("Nome sprite: " + skins[currentIndex]?.name);
     }
 }
