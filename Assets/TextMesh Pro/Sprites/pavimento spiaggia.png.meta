@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pavimento spiaggia_0: -4036564211921736525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,9 +1,24 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 public class MainCollectablesScript : MonoBehaviour
 {
-   public void ReturnToMenuCustom()
+    public Button esci;
+    public KeyCode up;
+    public KeyCode down;
+    // Update is called once per frame
+    void Update()
     {
-        SceneManager.LoadSceneAsync(0);//Home
+        if (Input.GetKeyDown(up))
+        {
+            esci.onClick.Invoke();
+        }
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }

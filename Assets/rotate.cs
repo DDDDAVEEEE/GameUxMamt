@@ -4,9 +4,9 @@ public class rotate : MonoBehaviour
 {
     public KeyCode sinistra;
     public KeyCode destra;
-    public float rotazione = 5f;
-    public float speed = 0;
-    public float attrito = 50;
+    public float rotazione = 125f;
+    public float speed = 1;
+    public float attrito = 0.92f;
 
     void Update()
     {
