@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.Animations;
+using System.Collections.Generic;
 public class SkinSelector : MonoBehaviour
 {
-    public Sprite[] skins;
+    public SpriteRenderer sr;
+    public List<Sprite> skins = new List<Sprite>();
+    
     public string[] skinNames;
-    public Image imageUI;
-
+    public GameObject PlayerSKin;
     public TMP_Text nameText;
     private int currentIndex = 0;
 
@@ -18,13 +21,13 @@ public class SkinSelector : MonoBehaviour
 
     public void Next()
     {
-        currentIndex = (currentIndex + 1) % skins.Length;
+        currentIndex = (currentIndex + 1) % skins.Count;
         UpdateSkinDisplay();
     }
 
     public void Previous()
     {
-        currentIndex = (currentIndex - 1 + skins.Length) % skins.Length;
+        currentIndex = (currentIndex - 1 + skins.Count) % skins.Count   ;
         UpdateSkinDisplay();
     }
 
@@ -40,9 +43,8 @@ public class SkinSelector : MonoBehaviour
     }
 
     private void UpdateSkinDisplay()
-    {
-        imageUI.sprite = skins[currentIndex];
-
+    { 
+        sr.sprite = skins[currentIndex];
         nameText.text = skinNames[currentIndex];
         Debug.Log("Skin Index: " + currentIndex);
         Debug.Log("Nome sprite: " + skins[currentIndex]?.name);

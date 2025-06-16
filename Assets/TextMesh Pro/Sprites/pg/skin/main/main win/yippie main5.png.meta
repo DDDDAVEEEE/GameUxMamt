@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yippie main5_0: 7639991419641965524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

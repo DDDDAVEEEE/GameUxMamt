@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      slide ocean3_0: -5871890241760270074
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

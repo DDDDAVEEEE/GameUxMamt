@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1467a51294cb3a4b89b46851766374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sr: {fileID: 0}
   skins:
   - {fileID: -3712500043697121923, guid: 6ca0c67c751835949a2de66f7f48e445, type: 3}
   - {fileID: 1972000458864211180, guid: df27dd1f777330d4bb6308a126caa7cb, type: 3}
@@ -680,7 +681,7 @@ MonoBehaviour:
   - 2
   - 3
   - 4
-  imageUI: {fileID: 935376843}
+  PlayerSKin: {fileID: 0}
   nameText: {fileID: 189058774}
 --- !u!222 &935376842
 CanvasRenderer:
@@ -1618,14 +1619,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997939048}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1467a51294cb3a4b89b46851766374f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skins: []
-  skinNames: []
-  imageUI: {fileID: 0}
+  sr: {fileID: 0}
+  skins:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  skinNames:
+  - Default
+  - Scolaresca
+  - Spiaggia
+  - TechWear
+  PlayerSKin: {fileID: 0}
   nameText: {fileID: 0}
 --- !u!1 &2055011619
 GameObject:

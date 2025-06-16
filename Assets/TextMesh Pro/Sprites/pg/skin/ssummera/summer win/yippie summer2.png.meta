@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yippie summer2_0: -2654981991276587952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

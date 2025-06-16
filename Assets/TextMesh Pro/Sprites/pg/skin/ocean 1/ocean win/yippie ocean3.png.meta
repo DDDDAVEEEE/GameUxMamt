@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yippie ocean3_0: -4149500540464802167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
