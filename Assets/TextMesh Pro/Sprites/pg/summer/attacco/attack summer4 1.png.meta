@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 727c0567ea997504b9504b5234011549
+guid: e9b9bf6e236ad854891864471c0a9a5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2296361384665054096
-    second: attack summer2_0
+      213: 4284582829576495141
+    second: attack summer4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack summer2_0
+      name: attack summer4_0
       rect:
         serializedVersion: 2
-        x: 189
+        x: 159
         y: 159
-        width: 242
+        width: 212
         height: 322
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09b72e043805edf10800000000000000
-      internalID: 2296361384665054096
+      spriteID: 52025aff165e57b30800000000000000
+      internalID: 4284582829576495141
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      attack summer2_0: 2296361384665054096
+      attack summer4_0: 4284582829576495141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
