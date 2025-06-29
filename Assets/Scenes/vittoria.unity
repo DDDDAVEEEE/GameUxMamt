@@ -444,6 +444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ef14d1be957664a9bc16bfbe01b776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  down: 115
+  up: 119
+  esci: {fileID: 829869033}
+  riprova: {fileID: 1568233551}
 --- !u!114 &1200414971
 MonoBehaviour:
   m_ObjectHideFlags: 0
