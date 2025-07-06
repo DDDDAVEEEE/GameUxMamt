@@ -37,6 +37,7 @@ public class pgScript : MonoBehaviour
     private bool canShild = true;
     private bool pgIsAlive = false;
     private bool imm=false;
+    public bool canMove=true;
     //--------------------------------------------------------------------------------------------
     public KeyCode salta;
     public KeyCode abbassa;
@@ -124,7 +125,7 @@ public class pgScript : MonoBehaviour
                 //canShild = false;
                 //canAttacco = true;
 
-                
+
                 StartCoroutine(Attacco());
 
                 //canAttacco = false;
@@ -137,7 +138,7 @@ public class pgScript : MonoBehaviour
                 //canAttacco = false;
                 //canShild = true;
 
-                
+
                 StartCoroutine(Shild());
 
                 //canAttacco = true;
@@ -145,7 +146,7 @@ public class pgScript : MonoBehaviour
 
             }
 
-            transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
+            
             if (!canShild && !canAttacco && !canSlide)
             {
                 anim.SetBool("IsRunning", true);
@@ -160,9 +161,14 @@ public class pgScript : MonoBehaviour
                 anim.SetBool("IsRunning", false);
 
             }
-
-
         }
+
+
+        /*if (!canMove) return;
+         */
+    
+        transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
+
         /*else
         {
             //animazione vittoria/idle
@@ -175,13 +181,19 @@ public class pgScript : MonoBehaviour
         //rb.AddForceX(speed);  
         //rb.AddForce(transform.right*speed);
 
-            //-------------------------------------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------------------------------------
 
     }
     /* void FixedUpdate()
      { 
          rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
      }*/
+
+        /*public void SetCanMove(bool value)
+            {
+                canMove = value;
+            }*/
+
     IEnumerator TempoIniziale()
     {
         anim.SetBool("IsStart", true);
