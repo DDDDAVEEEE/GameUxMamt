@@ -755,7 +755,7 @@ MonoBehaviour:
   destra: 100
   rotazione: 125
   speed: 1
-  attrito: 0.98
+  attrito: 0.9
 --- !u!114 &476942763
 MonoBehaviour:
   m_ObjectHideFlags: 0
