@@ -5,9 +5,7 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.SceneManagement;
 using Unity.Collections;
-using UnityEditor.Animations;
 using System.Collections.Generic;
-using UnityEditor.U2D.Aseprite;
 
 public class pgScript : MonoBehaviour
 {
@@ -29,7 +27,7 @@ public class pgScript : MonoBehaviour
     public BoxCollider2D hitboxA;
     public CircleCollider2D hitboxS;
     public BoxCollider2D coll;
-    public List<AnimatorController> skins = new List<AnimatorController>();
+    public List<RuntimeAnimatorController> skins = new List<RuntimeAnimatorController>();
 
     //--------------------------------------------------------------------------------------------
     private bool isJumping = false;

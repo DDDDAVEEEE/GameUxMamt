@@ -24,7 +24,6 @@ public class pgSelectionLVLsript : MonoBehaviour
         lucchetto3.SetActive(true);
         if (PlayerPrefs.GetInt("skin2") == 1) lucchetto2.SetActive(false);
         if (PlayerPrefs.GetInt("skin3") == 1) lucchetto3.SetActive(false);
-        lucchetto3.SetActive(false);
         PlayLVL1.SetActive(false); // Nasconde il pulsante all'inizio
         PlayLVL2.SetActive(false);
         PlayLVL3.SetActive(false);

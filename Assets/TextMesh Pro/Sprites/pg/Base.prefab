@@ -339,7 +339,13 @@ MonoBehaviour:
   bc: {fileID: 6047800861199428430}
   hitboxA: {fileID: 4956554424697822874}
   hitboxS: {fileID: 2843370847518447007}
-  Cuffie: {fileID: 0}
+  coll: {fileID: 0}
+  skins:
+  - {fileID: 9100000, guid: 183c4da6900b25742b5eb1e5a0708302, type: 2}
+  - {fileID: 9100000, guid: 7cb7279bb0d21294080b0bd580d4e6e0, type: 2}
+  - {fileID: 9100000, guid: 7c27734ce71516d4888b72ff416b5f60, type: 2}
+  - {fileID: 9100000, guid: 5834c570981efee47a9a3ca65f939a7c, type: 2}
+  canMove: 1
   salta: 119
   abbassa: 115
   para: 97

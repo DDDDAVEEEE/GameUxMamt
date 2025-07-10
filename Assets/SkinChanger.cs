@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEditor.Animations;
 using System.Collections.Generic;
 public class SkinSelector : MonoBehaviour
 {
