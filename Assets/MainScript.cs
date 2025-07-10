@@ -28,13 +28,9 @@ public class MainScript : MonoBehaviour
         {
             esci.onClick.Invoke();
         }
-        if (Input.GetKeyDown(right))
+        if (Input.GetKeyDown(right)||Input.GetKeyDown(left))
         {
             colle.onClick.Invoke();
-        }
-        if (Input.GetKeyDown(left))
-        {
-            opzio.onClick.Invoke();
         }
      }
    public void PlayGame()
