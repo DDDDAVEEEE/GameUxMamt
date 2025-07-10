@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,18 +7,18 @@ public class GameOverScript : MonoBehaviour
 {
     public static GameOverScript instance;
     public static int lvl;
-    public KeyCode down;
-    public KeyCode up;
+    public KeyCode right;
+    public KeyCode left;
     public Button esci;
     public Button riprova;
     
     void Update()
     {
-        if (Input.GetKeyDown(down))
+        if (Input.GetKeyDown(right))
         {
             riprova.onClick.Invoke();
         }
-        if (Input.GetKeyDown(up))
+        if (Input.GetKeyDown(left))
         {
             esci.onClick.Invoke();
         }

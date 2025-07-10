@@ -444,8 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ef14d1be957664a9bc16bfbe01b776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  down: 115
-  up: 119
+  right: 100
+  left: 97
   esci: {fileID: 829869033}
   riprova: {fileID: 1568233551}
 --- !u!114 &1200414971
@@ -676,7 +676,7 @@ Animator:
   m_GameObject: {fileID: 1568233549}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 61cb486596d96b14fb252d2085ed793a, type: 2}
+  m_Controller: {fileID: 9100000, guid: cb5d3774c8fdaa448a25c2cddaa1de99, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3337038689812066966, guid: 8c9b6f68e80e33144a838c478005c6ad, type: 3}
+  m_Sprite: {fileID: -3337038689812066966, guid: 9b11a9281bcda8442b9c973a6faef813, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

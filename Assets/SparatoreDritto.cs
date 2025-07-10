@@ -12,6 +12,8 @@ public class SparatoreDritto : MonoBehaviour
 {
     private Animator anim;
     private bool dead;
+    private bool aggro=false;
+    private bool over = true;
     public GameObject Proiettile;
     public Transform pos;
     private float timer;
@@ -20,6 +22,7 @@ public class SparatoreDritto : MonoBehaviour
     public BoxCollider2D player;
     private bool turned = false;
     public bool fisso;
+    public bool turn;
     public float speed = 0;
     public float raggio = 10;
 
@@ -34,23 +37,28 @@ public class SparatoreDritto : MonoBehaviour
     private void Update()
     {
         float distance = bc.Distance(player).distance;
-        if (distance < raggio &&!dead && !(fisso&&transform.position.x - player.transform.position.x < 0))
+        if ((distance < raggio /*|| aggro*/) && !dead)
         {
+            //aggro = true;
             transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
             timer += Time.deltaTime;
-            if (timer > frequenza)
+            if (timer > frequenza && over)
             {
-                
+
                 timer = 0;
                 shoot();
             }
         }
-        if (transform.position.x - player.transform.position.x < 0 && !fisso && !turned)
+        if (distance < 1 && !fisso && !turned)
         {
             quaternion rot = pos.rotation;
             GetComponent<SpriteRenderer>().flipX = true;
-            pos.SetPositionAndRotation(new Vector3(-pos.position.x, pos.position.y, pos.position.z), rot);
+            //pos.SetPositionAndRotation(new Vector3(-pos.position.x, pos.position.y, pos.position.z), rot);
             turned = true;
+        }
+        if (distance == 0 && !turn)
+        {
+            over = false;
         }
     }
 

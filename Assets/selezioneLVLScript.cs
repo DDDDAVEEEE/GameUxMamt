@@ -34,7 +34,19 @@ public class selezioneLVLScript : MonoBehaviour
     {
         if (Input.GetKeyDown(down))
         {
-            start.onClick.Invoke();
+            switch (PlayerPrefs.GetInt("Lvl"))
+            {
+                case 1:
+                    start.onClick.Invoke();
+                    break;
+                case 2:
+                    if(PlayerPrefs.GetInt("skin2") == 1) start.onClick.Invoke();
+                    break;
+                case 3:
+                    if(PlayerPrefs.GetInt("skin3") == 1) start.onClick.Invoke();
+                    break;
+            }
+            
         }
         if (Input.GetKeyDown(up))
         {

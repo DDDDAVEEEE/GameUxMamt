@@ -14,16 +14,22 @@ public class pgSelectionLVLsript : MonoBehaviour
     private int currentIndex = -3; // Indice della posizione attuale
     public GameObject PlayLVL1;
     public GameObject PlayLVL2;
+    public GameObject lucchetto2;
     public GameObject PlayLVL3;
+    public GameObject lucchetto3;
     
    public void Start()
     {
-        
+        lucchetto2.SetActive(true);
+        lucchetto3.SetActive(true);
+        if (PlayerPrefs.GetInt("skin2") == 1) lucchetto2.SetActive(false);
+        if (PlayerPrefs.GetInt("skin3") == 1) lucchetto3.SetActive(false);
+        lucchetto3.SetActive(false);
         PlayLVL1.SetActive(false); // Nasconde il pulsante all'inizio
-        PlayLVL2.SetActive(false); 
-        PlayLVL3.SetActive(false); 
+        PlayLVL2.SetActive(false);
+        PlayLVL3.SetActive(false);
         Debug.Log("Bottone disattivato!");
-        
+
     }
     void Update()
     {

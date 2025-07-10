@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using Unity.Collections;
 using UnityEditor.Animations;
 using System.Collections.Generic;
+using UnityEditor.U2D.Aseprite;
 
 public class pgScript : MonoBehaviour
 {
@@ -65,17 +66,14 @@ public class pgScript : MonoBehaviour
         coll = GameObject.FindGameObjectWithTag("col").GetComponent<BoxCollider2D>();
         switch (PlayerPrefs.GetInt("Lvl"))
         {
-            case 0:
-                if(PlayerPrefs.GetInt("col1")==1)
-                Destroy(GameObject.FindGameObjectWithTag("col"));
-                break;
             case 1:
-                if(PlayerPrefs.GetInt("col2")==1)
-                Destroy(GameObject.FindGameObjectWithTag("col"));
+                if (PlayerPrefs.GetInt("col1") == 1) { Destroy(GameObject.FindGameObjectWithTag("col")); }
                 break;
             case 2:
-                if(PlayerPrefs.GetInt("col3")==1)
-                Destroy(GameObject.FindGameObjectWithTag("col"));
+                if (PlayerPrefs.GetInt("col2") == 1) { Destroy(GameObject.FindGameObjectWithTag("col")); }
+                break;
+            case 3:
+                if (PlayerPrefs.GetInt("col3") == 1) { Destroy(GameObject.FindGameObjectWithTag("col")); }
                 break;
         }
         hitboxA.gameObject.SetActive(false);
@@ -112,7 +110,6 @@ public class pgScript : MonoBehaviour
             //-------------------------------------------------------------------------------------------------------------------
             if (Input.GetKeyDown(abbassa) && canSlide && !isJumping) // Attiva la scivolata premendo Shift
             {
-                Debug.Log("Scivolata avviata!");
 
                 StartCoroutine(Slide());
 
@@ -121,7 +118,6 @@ public class pgScript : MonoBehaviour
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(colpisci) && canAttacco) // Attiva la 
             {
-                Debug.Log("Attacco avviato!");
                 //canShild = false;
                 //canAttacco = true;
 
@@ -134,7 +130,6 @@ public class pgScript : MonoBehaviour
             //-------------------------------------------------------------------------------------------------------------------   
             if (Input.GetKeyDown(para) && canShild) // Attiva la 
             {
-                Debug.Log("Scudo avviato!");
                 //canAttacco = false;
                 //canShild = true;
 
@@ -161,13 +156,13 @@ public class pgScript : MonoBehaviour
                 anim.SetBool("IsRunning", false);
 
             }
+            transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
         }
 
 
         /*if (!canMove) return;
          */
     
-        transform.position += new Vector3(movimento * depthFactor * Time.deltaTime, 0, 0);
 
         /*else
         {
@@ -224,7 +219,6 @@ public class pgScript : MonoBehaviour
     
     IEnumerator Shild()
     {
-        Debug.Log("funziona!");
         anim.SetBool("IsShield", true);
         hitboxS.gameObject.SetActive(true);
         canShild = false;
@@ -239,7 +233,6 @@ public class pgScript : MonoBehaviour
 
     IEnumerator Attacco()
     {
-        Debug.Log("funziona attacco!");
         anim.SetBool("IsAttacco", true);
         canAttacco = false;
         canShild = false;
@@ -277,6 +270,7 @@ public class pgScript : MonoBehaviour
         canSlide = true; // Permette di scivolare di nuovo
     }
 
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground")
@@ -285,12 +279,11 @@ public class pgScript : MonoBehaviour
         }
         if (collision.gameObject.tag == "DannoGr" && !imm)
         {
-            Debug.Log("prende danno!");
+
             StartCoroutine(Damage());
         }
         if (collision.gameObject.tag == "mob" && !imm)
         {
-            Debug.Log("prende danno!");
             if (anim.GetBool("IsAttacco"))
                 Debug.Log("STA ATTACCANDO NON SUBISCE DANNO!");
             else
@@ -302,27 +295,31 @@ public class pgScript : MonoBehaviour
         {
             if (anim.GetBool("IsShield"))
             {
+                Debug.Log("parata successo");
                 anim.SetBool("IsShield", false);
+                anim.Play("ScudoOff");
                 hitboxS.gameObject.SetActive(false);
                 canAttacco = true;
                 canShild = true;
             }
             else
             {
+                Debug.Log("colpito da proiettile");
                 StartCoroutine(Damage());
-            } 
+            }
         }
+        if(collision.gameObject.tag == "Proie" && imm) Debug.Log("ktm");
+        
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("idk entra funzione con" + collider.gameObject.tag);
+        
         if (collider.gameObject.tag == "GameOver")
         {
             GameOver();
         }
-        if ((collider.gameObject.tag == "DannoGr" || collider.gameObject.tag == "Proie") && !imm)
+        if ((collider.gameObject.tag == "DannoGr") && !imm)
         {
-            Debug.Log("prende danno!");
             StartCoroutine(Damage());
         }
         if (collider.gameObject.tag == "CestinoDopo")
@@ -333,16 +330,15 @@ public class pgScript : MonoBehaviour
         }
         if (collider.gameObject.tag == "col")
         {
-            Debug.Log("DDistruzione");
             switch (PlayerPrefs.GetInt("Lvl"))
             {
-                case 0:
+                case 1:
                     PlayerPrefs.SetInt("col1", 1);
                     break;
-                case 1:
+                case 2:
                     PlayerPrefs.SetInt("col2", 1);
                     break;
-                case 2:
+                case 3:
                     PlayerPrefs.SetInt("col3", 1);
                     break;
             }
@@ -359,16 +355,25 @@ public class pgScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         pgIsAlive = false;
+        switch (PlayerPrefs.GetInt("Lvl"))
+            {
+                case 1:
+                    PlayerPrefs.SetInt("skin1", 1);
+                    break;
+                case 2:
+                    PlayerPrefs.SetInt("skin2", 1);
+                    break;
+                case 3:
+                    PlayerPrefs.SetInt("skin3", 1);
+                    break;
+            }
         yield return new WaitForSeconds(2f);
         SceneManager.LoadSceneAsync(9);
         //ANIMAZIONE VITTORIA / IDLE
     }
     IEnumerator Damage()
     {
-        
-        Debug.Log("decrementa hp!");
         if (!imm) {
-            anim.SetBool("IsDamage",true);
             hp--;
             switch (hp)
             {
@@ -379,15 +384,12 @@ public class pgScript : MonoBehaviour
                 StartCoroutine(Immortalita());
                     life2.GetComponent<Animator>().Play("VitaVuota");
                     yield return new WaitForSeconds(0.1f); // Aspetta il tempo di ricarica
-                    anim.SetBool("IsDamage",false);
                     Destroy(life2);
                     break;
                 case 2:
                 StartCoroutine(Immortalita());
-                    Debug.Log("leva la terza vita!");
                     life3.GetComponent<Animator>().Play("VitaVuota");
-                    yield return new WaitForSeconds(0.1f); // Aspetta il tempo di ricarica
-                    anim.SetBool("IsDamage",false);
+                    yield return new WaitForSeconds(0.1f); // Aspetta il tempo di ricarica 
                    Destroy(life3);
                     break;
             }

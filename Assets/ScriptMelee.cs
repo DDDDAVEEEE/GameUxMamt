@@ -22,7 +22,6 @@ public class ScriptMelee : MonoBehaviour
     {
         if (bc.Distance(pg).distance < 5f && !isDam && !isAtt)
         {
-            Debug.Log(bc.Distance(pg).distance);
             StartCoroutine(Attacco());
         }
     }

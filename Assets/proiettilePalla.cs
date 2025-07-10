@@ -34,29 +34,29 @@ public class proiettilePalla : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider2D)
     {
-        if (fragile && !collision.gameObject.CompareTag("mob"))
+        if (fragile && collider2D.gameObject.CompareTag("ground"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Shild"))
+        /*if (collision.gameObject.CompareTag("Shild"))
         {
             Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Player"))
+        }*/
+        if (collider2D.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (fragile && !collision.gameObject.CompareTag("mob"))
+        if (fragile && !collision2D.gameObject.CompareTag("mob"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision2D.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

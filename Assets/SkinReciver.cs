@@ -9,7 +9,7 @@ public class SkinReceiver : MonoBehaviour
     void Start()
     {
         int index = PlayerPrefs.GetInt("SelectedSkin", 0);
-        if (index >= 0 && index < availableSkins.Length)
+        if (index >= 0 && index <= availableSkins.Length)
         {
             imageUI.sprite = availableSkins[index];
         }
